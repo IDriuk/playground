@@ -1,6 +1,5 @@
 
-# Playground
-Project for experimenting with different technologies and testing tasks.
+# React app for development with docker
 
 ## References
-- [React app with Docker for development](https://link_to_project_brunch)
+- [Project main page](https://github.com/IDriuk/playground)
