@@ -1,0 +1,10 @@
+services:
+  web: 
+    build: ./
+    image: react_dev_image
+    container_name: react_dev_container
+    command: bash -c "npm install"
+    volumes:
+      - .:/app
+    ports:
+      - 127.0.0.1:3000:3000

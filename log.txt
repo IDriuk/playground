@@ -1,0 +1,25 @@
+Dockerfile
+
+FROM node
+
+WORKDIR /app
+    
+CMD ["/bin/bash", "-c", "npm install"]
+
+
+
+
+README.md
+
+# React app for development with docker
+
+## References
+- [Project main page](https://github.com/IDriuk/playground)
+
+
+npx create-react-router@latest
+
+docker build -t my-app .
+docker run -p 3000:3000 my-app
+
+docker exec -it server sh
