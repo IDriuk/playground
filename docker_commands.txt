@@ -1,0 +1,77 @@
+https://www.youtube.com/watch?v=wgA3yntF_ek&t=3317s
+https://github.com/PythonHubStudio/docker-course-demo
+https://docs.docker.com/desktop/install/mac-install/ 
+https://hub.docker.com/
+
+
+docker -v
+docker pull alpine:3.20
+docker images
+docker ps
+docker ps -a
+docker ps -aq
+
+docker stats
+docker logs hello
+docker container inspect server
+docker container inspect server | grep IPAddress
+
+docker stop server
+
+docker rmi hello-world:latest
+docker rmi myubuntu:1.0.0
+docker rm myos
+docker rm $(docker ps -aq)
+docker rm 391f531b8221
+
+docker container prune
+docker system prune
+docker system prune -a
+docker builder prune
+docker builder prune -a
+docker volume prune -a
+docker buildx prune
+docker image prune -f
+
+docker build . -t myubuntu:1.0.0
+docker diff container2
+docker commit container2 mynewos:1.0.0
+
+docker network ls
+docker network create mynetwork
+
+docker run hello-world
+docker run -it ubuntu
+docker run --name server nginx
+docker run -it --name app myapp:1.0.0
+docker run --rm hello-world:latest
+docker run --name hello  hello-world:latest
+docker run -d --name server nginx
+docker run -d -p 8000:80 --name server nginx
+docker run -d -p 127.0.0.1:8000:80 --name server nginx
+docker run -d -p 8000:80 -v ${PWD}/site:/usr/share/nginx/html --name server nginx
+docker run -d \
+-p 8000:80 \
+-v ${PWD}/site:/usr/share/nginx/html \
+--name server \
+nginx
+docker run --name mymongo --network mynetwork -d mongo 
+docker run --name plot --network mynetwork -p 3000:3000 -d flask
+docker run --name dbbrowser --network mynetwork -e ME_CONFIG_MONGODB_SERVER=mymongo -p 8081:8081 -d mongo-express
+
+docker start hello
+docker start -i hello
+docker start -i 2a0f55278eae
+
+docker exec -it server bash
+docker exec -it server sh
+
+docker compose up
+docker compose up -d
+docker compose down
+docker-compose up --build
+
+chmod -R 755 ${PWD}/site
+ls ${PWD}/site
+exit
+clear
