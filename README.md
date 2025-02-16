@@ -3,6 +3,30 @@
 ## References
 - [Project main page](https://github.com/IDriuk/playground)
 
+## Notes
+- use docker-compose up and open http://localhost:5173/ for development
+- use commented code in dockerfile to switch docker to build mode instead of development
+
+# Working log
+echo "# playground" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:IDriuk/playground.git
+git push -u origin main 
+
+vscode: cmd + shift + p workspace trust 
+
+npx create-react-router@latest
+
+docker build -t my-app .
+docker run -p 3000:3000 my-app
+
+docker exec -it server sh
+
+docker-compose up --build
+
 # Welcome to React Router!
 
 A modern, production-ready template for building full-stack React applications using React Router.
