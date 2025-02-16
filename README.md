@@ -5,7 +5,7 @@
 - [Project main page](https://github.com/IDriuk/playground)
 
 ## Notes
-- use docker-compose up and open http://localhost:8080/ for adminer
+- use ```docker-compose up``` and open http://localhost:8080/ for adminer
 
 # Working log
 - ```docker run -it -v ${PWD}:/rental  --rm --network playground_default postgres bash``` to use postgres commands
