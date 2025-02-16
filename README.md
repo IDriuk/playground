@@ -11,3 +11,4 @@ Project for experimenting with different technologies and testing tasks.
 - use ```git clean -fd``` to remove unused files after brunch switching
 - use ```git push --delete origin react_app_dev`` to remove remote branch on github
 - use ```git branch -D react_app_dev``` to remove local branch on github
+- use ```docker stop $(docker ps -aq)``` and ```docker system prune -a``` to remove containers and images
