@@ -3,8 +3,10 @@
 Project for experimenting with different technologies and testing tasks.
 
 ## References
-- [React app with Docker for development](https://github.com/IDriuk/playground/tree/react_app_dev)
+- [React router app with Docker for development](https://github.com/IDriuk/playground/tree/react_router_dev)
 
 ## Notes
 - use ```reset --hard HEAD```
 - use ```git clean -fd``` to remove unused files after brunch switching
+- use ```git push --delete origin react_app_dev`` to remove remote branch on github
+- use ```git branch -D react_app_dev``` to remove local branch on github
