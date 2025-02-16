@@ -1,0 +1,33 @@
+# System: PostgreSQL
+# Server: db
+# Username: postgres
+# Password: example
+# Database: оставить пустым (или указать postgres).
+
+services:
+
+  db:
+    image: postgres:16.4
+    # container_name: pgcon
+    # networks:
+    #   - pgnet
+    restart: always
+    shm_size: 128mb
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: example
+    # ports:
+    #   - 5432:5432
+
+  adminer:
+    image: adminer
+    restart: always
+    # networks:
+    #   - pgnet
+    ports:
+      - 8080:8080
+
+# networks:
+#   pgnet:
+#     driver: bridge

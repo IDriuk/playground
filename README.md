@@ -1,13 +1,10 @@
 
-# Playground
-Project for experimenting with different technologies and testing tasks.
+# Postgres with docker compose
 
 ## References
-- [React router app with Docker for development](https://github.com/IDriuk/playground/tree/react_router_dev)
-- [Postgres with docker compose](https://github.com/IDriuk/playground/tree/postgres_dev)
+- [Project main page](https://github.com/IDriuk/playground)
 
 ## Notes
-- use ```reset --hard HEAD```
-- use ```git clean -fd``` to remove unused files after brunch switching
-- use ```git push --delete origin react_app_dev`` to remove remote branch on github
-- use ```git branch -D react_app_dev``` to remove local branch on github
+- use docker-compose up and open http://localhost:5173/ for development
+
+# Working log
