@@ -1,14 +1,17 @@
 
-# Playground
-Project for experimenting with different technologies and testing tasks.
+# Expess.js app
+Example of express.js app
 
 ## References
-- [React router app with Docker for development](https://github.com/IDriuk/playground/tree/react_router_dev)
-- [Postgres with docker compose](https://github.com/IDriuk/playground/tree/postgres_dev)
+- [Project main page](https://github.com/IDriuk/playground)
 
 ## Notes
-- use ```reset --hard HEAD```
-- use ```git clean -fd``` to remove unused files after brunch switching
-- use ```git push --delete origin react_app_dev`` to remove remote branch on github
-- use ```git branch -D react_app_dev``` to remove local branch on github
-- use ```docker stop $(docker ps -aq)``` and ```docker system prune -a``` to remove containers and images
+- use ```docker compose up``` , open [localhost](http://localhost:3000/)
+
+## Working log
+- ```docker run -it -p 3000:3000 -v ${PWD}:/app --name server node``` run node container
+- ```docker exec -it server bash``` open bash 
+- ```npm init```
+- ```npm install express```
+- create index.js file 
+- ```node .```
