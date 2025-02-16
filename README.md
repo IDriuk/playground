@@ -4,6 +4,7 @@ Project for experimenting with different technologies and testing tasks.
 
 ## References
 - [React router app with Docker for development](https://github.com/IDriuk/playground/tree/react_router_dev)
+- [Postgres with docker compose](https://github.com/IDriuk/playground/tree/postgres_dev)
 
 ## Notes
 - use ```reset --hard HEAD```
