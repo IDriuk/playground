@@ -1,0 +1,10 @@
+services:
+  web: 
+    build: ./
+    image: express_image
+    container_name: express_container
+    command: bash -c "npm install && node ."
+    volumes:
+      - .:/app
+    ports:
+      - 3000:3000
