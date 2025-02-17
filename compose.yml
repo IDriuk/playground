@@ -1,4 +1,31 @@
+# System: PostgreSQL
+# Server: db
+# Username: postgres
+# Password: example
+# Database: оставить пустым (или указать postgres).
+
 services:
+
+  db:
+    image: postgres:16.4
+    restart: always
+    shm_size: 128mb
+    volumes:
+      - ./data:/var/lib/postgresql/data
+      - ./db.tar:/docker-entrypoint-initdb.d/db.tar # Mount db.tar
+      - ./restore.sh:/docker-entrypoint-initdb.d/restore.sh # Mount the script
+    environment:
+      POSTGRES_PASSWORD: example
+    entrypoint: ["/bin/bash", "/docker-entrypoint-initdb.d/restore.sh"]
+
+  adminer:
+    image: adminer
+    restart: always
+    # networks:
+    #   - pgnet
+    ports:
+      - 8080:8080
+
   web: 
     build: ./
     image: express_image
@@ -8,3 +35,5 @@ services:
       - .:/app
     ports:
       - 3000:3000
+    depends_on:
+      - db
