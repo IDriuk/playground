@@ -12,3 +12,6 @@ Example of express.js app connected with postgres
 
 ## Working log
 - ```docker network ls``` to check docker network name (pgnet), use it in restore_dump script.
+- ```docker run -it -p 3000:3000 -v ${PWD}:/app --name server node``` run node container
+- ```docker exec -it server bash``` open bash 
+- ```npm install pg-promise```
