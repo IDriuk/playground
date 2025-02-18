@@ -32,7 +32,7 @@ services:
     build: ./
     image: express_image
     container_name: express_container
-    command: bash -c "npm install && node ."
+    command: bash -c "npm install && npm run dev"
     volumes:
       - .:/app
     networks:

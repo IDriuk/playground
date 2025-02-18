@@ -1,27 +1,21 @@
-const express = require('express');
-const pgp = require('pg-promise')(/* options */)
-const db = pgp('postgres://postgres:example@db:5432/dvdrental')
+import { createServer } from 'node:http';
+import pg from 'pg';
 
-const app = express();
-const PORT = 3000;
+const { Client } = pg
+const hostname = '0.0.0.0';
+const port = 3000;
 
-app.get('/', (req, res)=>{
-  db.many('SELECT * from country')
-  .then((data) => {
-    console.log('DATA:', data)
+const server = createServer(async (req, res) => {
+  const client = new Client({connectionString: "postgres://postgres:example@db:5432/dvdrental"})
+  await client.connect()
+  const data = await client.query('SELECT * from country')
+  await client.end()
 
-    res.status(200);
-    res.send("Welcome to root URL of Server" + JSON.stringify(data));
-  })
-  .catch((error) => {
-    console.log('ERROR:', error)
-  })
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end(JSON.stringify(data));
 });
 
-app.listen(PORT, (error) =>{
-    if(!error)
-        console.log("Server is Successfully Running, and App is listening on port "+ PORT)
-    else 
-        console.log("Error occurred, server can't start", error);
-    }
-);
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
