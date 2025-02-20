@@ -1,21 +1,21 @@
-
 # Redux toolkit example
+
 Example from vite-template-redux
 
 ## References
+
 - [Project main page](https://github.com/IDriuk/playground)
 
 ## Notes
-- use ```docker compose up```, open [localhost](http://localhost:3000/) 
+
+- use `docker compose up`, open [localhost](http://localhost:3000/)
 
 ## Working log
-- ```npx degit reduxjs/redux-templates/packages/vite-template-redux my-app``` to create redux toolkit project
-- ```docker run -it --rm -p 5173:5173 -v ${PWD}:/app --name server node bash -c "cd /app && npm install && npm run dev -- --host"```
-- ```ifconfig | grep inet``` to find ip address adress of wifi
-- open ```http://192.168.1.5:5173/``` on phone
 
-
-
+- `npx degit reduxjs/redux-templates/packages/vite-template-redux my-app` to create redux toolkit project
+- `docker run -it --rm -p 5173:5173 -v ${PWD}:/app --name server node bash -c "cd /app && npm install && npm run dev -- --host"`
+- `ifconfig | grep inet` to find ip address adress of wifi
+- open `http://192.168.1.5:5173/` on phone
 
 # vite-template-redux
 
