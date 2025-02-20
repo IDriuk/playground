@@ -9,8 +9,4 @@ Project for experimenting with different technologies and testing tasks.
 - [Express with postgres](https://github.com/IDriuk/playground/tree/express_postgres)
 
 ## Notes
-- use ```reset --hard HEAD```
-- use ```git clean -fd``` to remove unused files after brunch switching
-- use ```git push --delete origin react_app_dev`` to remove remote branch on github
-- use ```git branch -D react_app_dev``` to remove local branch on github
-- use ```docker stop $(docker ps -aq)``` and ```docker system prune -a``` to remove containers and images
+- use the `commands` folder for terminal commands related to Docker, PostgreSQL, and Git.
