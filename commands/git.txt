@@ -1,4 +1,0 @@
-git reset --hard HEAD
-git clean -fd
-git push --delete origin react_app_dev
-git branch -D react_app_dev

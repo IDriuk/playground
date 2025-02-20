@@ -1,12 +1,41 @@
 
-# Playground
-Project for experimenting with different technologies and testing tasks.
+# Redux toolkit example
+Example from vite-template-redux
 
 ## References
-- [React router app with Docker for development](https://github.com/IDriuk/playground/tree/react_router_dev)
-- [Postgres with docker compose](https://github.com/IDriuk/playground/tree/postgres_dev)
-- [Express.js with docker compose](https://github.com/IDriuk/playground/tree/express_dev)
-- [Express with postgres](https://github.com/IDriuk/playground/tree/express_postgres)
+- [Project main page](https://github.com/IDriuk/playground)
 
 ## Notes
-- use the `commands` folder for terminal commands related to Docker, PostgreSQL, and Git.
+- use ```docker compose up```, open [localhost](http://localhost:3000/) 
+
+## Working log
+- ```npx degit reduxjs/redux-templates/packages/vite-template-redux my-app``` to create redux toolkit project
+
+
+# vite-template-redux
+
+Uses [Vite](https://vitejs.dev/), [Vitest](https://vitest.dev/), and [React Testing Library](https://github.com/testing-library/react-testing-library) to create a modern [React](https://react.dev/) app compatible with [Create React App](https://create-react-app.dev/)
+
+```sh
+npx degit reduxjs/redux-templates/packages/vite-template-redux my-app
+```
+
+## Goals
+
+- Easy migration from Create React App or Vite
+- As beginner friendly as Create React App
+- Optimized performance compared to Create React App
+- Customizable without ejecting
+
+## Scripts
+
+- `dev`/`start` - start dev server and open browser
+- `build` - build for production
+- `preview` - locally preview production build
+- `test` - launch test runner
+
+## Inspiration
+
+- [Create React App](https://github.com/facebook/create-react-app/tree/main/packages/cra-template)
+- [Vite](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react)
+- [Vitest](https://github.com/vitest-dev/vitest/tree/main/examples/react-testing-lib)
