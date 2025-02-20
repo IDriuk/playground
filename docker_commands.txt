@@ -49,6 +49,7 @@ docker run --name hello  hello-world:latest
 docker run -d --name server nginx
 docker run -d -p 8000:80 --name server nginx
 docker run -d -p 127.0.0.1:8000:80 --name server nginx
+docker run -it -p 3000:3000 -v ${PWD}:/app --name server node bash
 docker run -d -p 8000:80 -v ${PWD}/site:/usr/share/nginx/html --name server nginx
 docker run -d \
 -p 8000:80 \
