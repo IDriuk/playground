@@ -10,6 +10,11 @@ Example from vite-template-redux
 
 ## Working log
 - ```npx degit reduxjs/redux-templates/packages/vite-template-redux my-app``` to create redux toolkit project
+- ```docker run -it --rm -p 5173:5173 -v ${PWD}:/app --name server node bash -c "cd /app && npm install && npm run dev -- --host"```
+- ```ifconfig | grep inet``` to find ip address adress of wifi
+- open ```http://192.168.1.5:5173/``` on phone
+
+
 
 
 # vite-template-redux
