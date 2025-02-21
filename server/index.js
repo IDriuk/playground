@@ -1,18 +1,21 @@
 import express from 'express';
 import pg from 'pg';
+import cors from 'cors'
 const { Client } = pg
 
 const app = express();
 const PORT = 3000;
 
+app.use(cors());
+
 app.get('/', async (req, res)=>{
   const client = new Client({connectionString: "postgres://postgres:example@db:5432/dvdrental"})
   await client.connect()
-  const data = await client.query('SELECT * from country')
+  const data = await client.query('SELECT * from country');
   await client.end();
 
   res.status(200);
-  res.send(JSON.stringify(data));
+  res.send(JSON.stringify({quotes: data.rows}));
 });
 
 app.listen(PORT, (error) =>{

@@ -2,9 +2,9 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
 
 interface Quote {
-  id: number
-  quote: string
-  author: string
+  country_id: number
+  last_update: string
+  country: string
 }
 
 interface QuotesApiResponse {
@@ -16,7 +16,7 @@ interface QuotesApiResponse {
 
 // Define a service using a base URL and expected endpoints
 export const quotesApiSlice = createApi({
-  baseQuery: fetchBaseQuery({ baseUrl: "https://dummyjson.com/quotes" }),
+  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3000" }),
   reducerPath: "quotesApi",
   // Tag types are used for caching and invalidation.
   tagTypes: ["Quotes"],

@@ -43,11 +43,11 @@ export const Quotes = () => {
             </option>
           ))}
         </select>
-        {data.quotes.map(({ author, quote, id }) => (
-          <blockquote key={id}>
-            &ldquo;{quote}&rdquo;
+        {data.quotes.map(({ country, last_update, country_id }) => (
+          <blockquote key={country_id}>
+            &ldquo;{last_update}&rdquo;
             <footer>
-              <cite>{author}</cite>
+              <cite>{country}</cite>
             </footer>
           </blockquote>
         ))}
