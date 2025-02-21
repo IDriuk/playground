@@ -1,11 +1,18 @@
-const express = require('express');
+import express from 'express';
+import pg from 'pg';
+const { Client } = pg
 
 const app = express();
 const PORT = 3000;
 
-app.get('/', (req, res)=>{
-    res.status(200);
-    res.send("Welcome to root URL of Server");
+app.get('/', async (req, res)=>{
+  const client = new Client({connectionString: "postgres://postgres:example@db:5432/dvdrental"})
+  await client.connect()
+  const data = await client.query('SELECT * from country')
+  await client.end();
+
+  res.status(200);
+  res.send(JSON.stringify(data));
 });
 
 app.listen(PORT, (error) =>{
