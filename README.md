@@ -16,5 +16,7 @@ Example from vite-template-redux with express.js and pg.
 
 ## Working log
 - open [render dashboard](https://dashboard.render.com/)
-- New Web Service
-- Github open repo, Branch: redux_express_postgres, Language: Node, Root directory: server 
+- New Web Service, Github open repo, Branch: redux_express_postgres, Language: Node, Root directory: server 
+- open [app on render](https://playground-pb7l.onrender.com/)
+- new postgres service render_postgres
+- add some data to postgres

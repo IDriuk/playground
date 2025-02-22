@@ -39,6 +39,11 @@ services:
       - 3000:3000
     volumes:
       - ./server:/app
+    environment:
+      POSTGRES_PASSWORD: example
+      POSTGRES_USER: postgres
+      POSTGRES_HOST_PORT: db:5432
+      POSTGRES_DB: dvdrental
     command: bash -c "cd /app && npm install && npm run dev"
   web_client:
     image: node

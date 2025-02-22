@@ -12,11 +12,17 @@ const { Client } = pg
 const app = express();
 const PORT = 3000;
 
+let pgUser  = process.env.POSTGRES_USER || 'postgres'
+let pgPassword = process.env.POSTGRES_PASSWORD || 'example'
+let pgHostPort = process.env.POSTGRES_HOST_PORT || 'db:5432'
+let pgDb = process.env.POSTGRES_DB || 'dvdrental'
+const pgUrl = `postgres://${pgUser}:${pgPassword}@${pgHostPort}/${pgDb}`;
+
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/api', async (req, res)=>{
-  const client = new Client({connectionString: "postgres://postgres:example@db:5432/dvdrental"})
+  const client = new Client({connectionString: pgUrl})
   await client.connect()
   const data = await client.query('SELECT * from country');
   await client.end();
