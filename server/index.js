@@ -1,14 +1,21 @@
 import express from 'express';
+import path from 'path';
 import pg from 'pg';
 import cors from 'cors'
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const { Client } = pg
 
 const app = express();
 const PORT = 3000;
 
 app.use(cors());
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', async (req, res)=>{
+app.get('/api', async (req, res)=>{
   const client = new Client({connectionString: "postgres://postgres:example@db:5432/dvdrental"})
   await client.connect()
   const data = await client.query('SELECT * from country');

@@ -12,3 +12,4 @@ Example from vite-template-redux with express.js and pg.
 - open [vite dev server](http://localhost:5173/).
 - use System: PostgreSQL, Server: db, Username: postgres, Password: example for adminer.
 - open second terminal and run ```chmod +x db/restore_dump.sh && db/restore_dump.sh``` to restore dvd rental database.
+- build client and copy files from client/dist to server/public for production
