@@ -25,6 +25,8 @@ app.get('/api', async (req, res)=>{
   const client = new Client({connectionString: pgUrl})
   await client.connect()
   const data = await client.query('SELECT * from country');
+  console.log('pgUrl ==================', pgUrl)
+  console.log('data =================', JSON.stringify(data))
   await client.end();
 
   res.status(200);
