@@ -14,9 +14,12 @@ interface QuotesApiResponse {
   limit: number
 }
 
+const isProd =import.meta.env.PROD
+const baseUrl = !isProd ? "http://localhost:3000/api" : `${window.location.origin}/api`
+
 // Define a service using a base URL and expected endpoints
 export const quotesApiSlice = createApi({
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3000/api" }),
+  baseQuery: fetchBaseQuery({ baseUrl }),
   reducerPath: "quotesApi",
   // Tag types are used for caching and invalidation.
   tagTypes: ["Quotes"],
