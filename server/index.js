@@ -1,7 +1,7 @@
 import express from 'express';
 import path from 'path';
 import pg from 'pg';
-import cors from 'cors'
+import cors from 'cors';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
