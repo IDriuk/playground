@@ -21,7 +21,7 @@ const pgUrl = `postgres://${pgUser}:${pgPassword}@${pgHostPort}/${pgDb}`;
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/api', async (req, res)=>{
+app.get('/api/quotes', async (req, res)=>{
   const client = new Client({connectionString: pgUrl})
   await client.connect()
   const data = await client.query('SELECT * from country');
@@ -29,6 +29,24 @@ app.get('/api', async (req, res)=>{
 
   res.status(200);
   res.send(JSON.stringify({quotes: data.rows}));
+});
+
+app.get('/api/quotes/:id', async (req, res)=>{
+  res.send(JSON.stringify({country_id: 1, last_update: 5, country: 'country 123'}));
+});
+
+app.post('/api/quotes', async (req, res) => {
+  res.status(200)
+  res.send('Created quote')
+})
+
+app.put('/api/quotes/:id', async (req, res) => {
+  res.status(200)
+  res.send('Updated quote')
+})
+
+app.delete('/api/quotes/:id', function(req, res){
+  res.send('Deleted quote');
 });
 
 app.listen(PORT, (error) =>{
