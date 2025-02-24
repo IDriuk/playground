@@ -1,5 +1,5 @@
-import { useState } from "react"
-
+import { io, Socket } from "socket.io-client";
+import { useState, useEffect } from "react"
 import { useAppDispatch, useAppSelector } from "../../app/hooks"
 import styles from "./Counter.module.css"
 import {
@@ -12,6 +12,9 @@ import {
   selectStatus,
 } from "./counterSlice"
 
+const SOCKET_PORT = 3000; 
+const SERVER_URL = `http://localhost:${SOCKET_PORT}`;
+
 export const Counter = () => {
   const dispatch = useAppDispatch()
   const count = useAppSelector(selectCount)
@@ -20,9 +23,59 @@ export const Counter = () => {
 
   const incrementValue = Number(incrementAmount) || 0
 
+  let socket: Socket;
+
+  async function incrementWithFetch() {
+    const response = await fetch(`${SERVER_URL}/incr`, {
+      method: "post",
+    });
+    const text = await response.text()
+    console.log('incrementWithFetch ========', text)
+  }
+
+  function logout() {
+    fetch(`${SERVER_URL}/logout`, {
+      method: "post",
+    });
+  }
+
+  async function incrementWithEmit() {
+    socket.emit("incr", (count: any) => {
+      console.log('increment with emit ======', count)
+    });
+  }
+
+  useEffect(() => {
+    socket = io(SERVER_URL)
+
+    socket.on("connect", () => {
+      console.log('connected')
+    })
+
+    socket.on("disconnect", () => {
+      console.log("disconnected")
+    })
+
+    socket.on("current count", (count) => {
+      console.log("current count", count)
+    })
+  }, [])
+
   return (
     <div>
       <div className={styles.row}>
+        <button
+          className={styles.button}
+          onClick={() => logout()}
+        > logout </button>
+        <button
+          className={styles.button}
+          onClick={() => incrementWithFetch()}
+        > incrementWithFetch </button>
+        <button
+          className={styles.button}
+          onClick={() => incrementWithEmit()}
+        > incrementWithEmit </button>
         <button
           className={styles.button}
           aria-label="Decrement value"

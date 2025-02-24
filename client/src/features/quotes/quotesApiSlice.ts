@@ -16,7 +16,6 @@ interface QuotesApiResponse {
 
 const isProd =import.meta.env.PROD
 const baseUrl = !isProd ? "http://localhost:3000/api" : `${window.location.origin}/api`
-console.log('baseUrl =========', baseUrl)
 
 // Define a service using a base URL and expected endpoints
 export const quotesApiSlice = createApi({
