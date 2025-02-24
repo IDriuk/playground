@@ -12,8 +12,8 @@ import {
   selectStatus,
 } from "./counterSlice"
 
-const SOCKET_PORT = 3000; 
-const SERVER_URL = `http://localhost:${SOCKET_PORT}`;
+const isProd =import.meta.env.PROD
+const baseUrl = !isProd ? "http://localhost:3000" : `${window.location.origin}`
 
 export const Counter = () => {
   const dispatch = useAppDispatch()
@@ -26,7 +26,7 @@ export const Counter = () => {
   let socket: Socket;
 
   async function incrementWithFetch() {
-    const response = await fetch(`${SERVER_URL}/incr`, {
+    const response = await fetch(`${baseUrl}/incr`, {
       method: "post",
     });
     const text = await response.text()
@@ -34,7 +34,7 @@ export const Counter = () => {
   }
 
   function logout() {
-    fetch(`${SERVER_URL}/logout`, {
+    fetch(`${baseUrl}/logout`, {
       method: "post",
     });
   }
@@ -46,7 +46,7 @@ export const Counter = () => {
   }
 
   useEffect(() => {
-    socket = io(SERVER_URL)
+    socket = io(baseUrl)
 
     socket.on("connect", () => {
       console.log('connected')

@@ -15,3 +15,6 @@ Example of express.js app
 - ```npm install express```
 - create index.js file 
 - ```node .```
+
+## Issues
+- HTTP session works correctly if the client and server are on the same host and port.
