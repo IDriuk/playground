@@ -65,7 +65,7 @@ io.on("connection", (socket) => {
 
   socket.on("incr", (cb) => {
     req.session.reload((err) => {
-      console.log('req.session ====2', req.session)
+      console.log('req.session ====2', req.session.count)
       if (err) {
         // session has expired
         return socket.disconnect();
