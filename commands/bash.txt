@@ -1,0 +1,9 @@
+Find ip to connect from wifi
+
+ip a | grep inet
+
+ifconfig | grep inet
+Look for an IP similar to 192.168.x.x.
+
+Windows (CMD or PowerShell):
+ipconfig
