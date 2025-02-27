@@ -27,6 +27,7 @@ docker rm 391f531b8221
 docker container prune
 docker system prune
 docker system prune -a
+docker system prune -a --volumes
 docker builder prune
 docker builder prune -a
 docker volume prune -a
