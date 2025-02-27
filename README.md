@@ -1,14 +1,66 @@
+# Socket.IO chat platform
 
-# Playground
-Project for experimenting with different technologies and testing tasks.
+A basic chat platform based on [Socket.IO](https://socket.io/) with:
 
-## References
-- [React router app with Docker for development](https://github.com/IDriuk/playground/tree/react_router_dev)
-- [Postgres with docker compose](https://github.com/IDriuk/playground/tree/postgres_dev)
-- [Express.js with docker compose](https://github.com/IDriuk/playground/tree/express_dev)
-- [Express with postgres](https://github.com/IDriuk/playground/tree/express_postgres)
-- [App on Render](https://playground-pb7l.onrender.com/) for production hosting
+- channel-based messages:
 
+![Screenshot of a public channel](./assets/channel_based_messages.png)
 
-## Notes
-- use the `commands` folder for terminal commands related to Docker, PostgreSQL, and Git.
+- and private messages:
+
+![Screenshot of a private channel](./assets/private_messages.png)
+
+Table of contents:
+
+<!-- TOC -->
+* [How to use](#how-to-use)
+* [Development](#development)
+  * [Server](#server)
+  * [Client](#client)
+* [Data model](#data-model)
+* [Licence](#licence)
+<!-- TOC -->
+
+## How to use
+
+```shell
+$ docker compose up -d
+```
+
+Then go to http://localhost:8080
+
+## Development
+
+### Server
+
+```shell
+$ cd server
+
+# start the PostgreSQL database
+$ docker compose up -d
+
+# start the server
+$ npm run dev
+```
+
+### Client
+
+```shell
+$ cd vue-client
+
+# start the client
+$ npm run dev
+```
+
+Then go to http://localhost:5173
+
+## Data model
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/data_model_dark.png">
+  <img alt="Data model" src="./assets/data_model.png">
+</picture>
+
+## Licence
+
+[MIT](./LICENSE)
