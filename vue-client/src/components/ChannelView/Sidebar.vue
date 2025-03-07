@@ -28,7 +28,7 @@ async function logOut() {
         width="40"
         height="32"
       />
-      <span class="fs-4">Socket.IO chat</span>
+      <span class="fs-4">Chat</span>
     </a>
 
     <h6 class="mt-4">CHANNELS</h6>

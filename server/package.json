@@ -1,12 +1,10 @@
 {
-  "name": "socket.io-chat-platform",
+  "name": "chat-server",
   "version": "°0.0.1",
-  "description": "Chat platform based on Socket.IO",
-  "private": true,
+  "description": "Chat app",
   "type": "module",
   "main": "index.js",
   "author": "",
-  "license": "MIT",
   "scripts": {
     "start": "node entrypoint.js",
     "dev": "node index.js",

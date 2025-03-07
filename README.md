@@ -1,6 +1,4 @@
-# Socket.IO chat platform
-
-A basic chat platform based on [Socket.IO](https://socket.io/) with:
+# Chat
 
 - channel-based messages:
 
@@ -18,7 +16,6 @@ Table of contents:
   * [Server](#server)
   * [Client](#client)
 * [Data model](#data-model)
-* [Licence](#licence)
 <!-- TOC -->
 
 ## How to use
@@ -60,7 +57,3 @@ Then go to http://localhost:5173
   <source media="(prefers-color-scheme: dark)" srcset="./assets/data_model_dark.png">
   <img alt="Data model" src="./assets/data_model.png">
 </picture>
-
-## Licence
-
-[MIT](./LICENSE)

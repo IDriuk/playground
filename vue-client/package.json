@@ -1,8 +1,6 @@
 {
-  "name": "vue-client",
-  "version": "0.0.0",
-  "private": true,
-  "license": "MIT",
+  "name": "vue-chat-client",
+  "version": "0.0.1",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
