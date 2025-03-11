@@ -7,3 +7,17 @@ Look for an IP similar to 192.168.x.x.
 
 Windows (CMD or PowerShell):
 ipconfig
+
+
+ssh-keygen -t ed25519 -C "your_email@example.com"
+cp -r ./ /app
+root/.ssh
+~/.ssh
+yarn add gh-pages --dev
+
+git config --global user.email "veytarn@gmail.com"
+git config --global user.name "Ivan Driuk"
+
+yarn deploy
+
+Repo settings / choose gh-pages
