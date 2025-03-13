@@ -49,6 +49,8 @@ export async function setup() {
 
   const { pgPool, close } = await createApp(httpServer, {
     postgres: {
+      /* for development with docker-compose */
+      host: "db",
       user: "postgres",
       password: "changeit",
     },

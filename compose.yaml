@@ -1,42 +1,59 @@
 services:
-  nginx:
-    build:
-      context: .
-      dockerfile: nginx/Dockerfile
-    ports:
-      - "8080:80"
-    depends_on:
-      - backend01
-      - backend02
-      - backend03
-
-  backend01:
-    build:
-      context: ./server
-    depends_on:
-      db:
-        condition: service_healthy
-
-  backend02:
-    build:
-      context: ./server
-    depends_on:
-      db:
-        condition: service_healthy
-
-  backend03:
-    build:
-      context: ./server
-    depends_on:
-      db:
-        condition: service_healthy
-
   db:
-    image: postgres:14
+    image: postgres:17.4
+    container_name: pg_container
+    networks:
+      - pgnet
+    restart: always
+    shm_size: 128mb
+    ports:
+      - 5432:5432
     environment:
-      POSTGRES_PASSWORD: "changeit"
+      POSTGRES_PASSWORD: changeit
+    volumes:
+      - ./server/db/data:/var/lib/postgresql/data
     healthcheck:
       test: [ "CMD-SHELL", "pg_isready -U postgres" ]
       interval: 5s
       timeout: 5s
       retries: 5
+  adminer:
+    image: adminer:4.17.1
+    container_name: admin_container
+    depends_on:
+      - db
+    networks:
+      - pgnet
+    restart: always
+    ports:
+      - 8080:8080
+  server: 
+    image: node:23.9
+    container_name: express_container
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - pgnet
+    ports:
+      - 3000:3000
+    volumes:
+      - ./server:/app
+    command: bash -c "cd /app && npm install && npm run docker-dev"
+  client:
+    image: node:23.9
+    container_name: vue_container
+    depends_on:
+      - server
+    networks:
+      - pgnet
+    ports:
+      - 5173:5173
+    volumes:
+      - ./vue-client:/app
+    command: bash -c "cd /app && npm install && npm run dev -- --host"
+
+networks:
+  pgnet:
+    name: pgnet
+    driver: bridge

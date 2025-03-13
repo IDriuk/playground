@@ -17,6 +17,11 @@ const { close } = await createApp(httpServer, {
     password: "changeit",
   },
   sessionSecrets: ["changeit"],
+  /* for development with docker-compose */
+  cors: {
+    origin: ["http://localhost:5173"],
+    credentials: true,
+  },
 });
 
 process.on("SIGTERM", async () => {

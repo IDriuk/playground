@@ -1,59 +1,39 @@
 # Chat
 
-- channel-based messages:
-
-![Screenshot of a public channel](./assets/channel_based_messages.png)
-
-- and private messages:
-
-![Screenshot of a private channel](./assets/private_messages.png)
-
-Table of contents:
-
-<!-- TOC -->
-* [How to use](#how-to-use)
-* [Development](#development)
-  * [Server](#server)
-  * [Client](#client)
-* [Data model](#data-model)
-<!-- TOC -->
+Chat app with Vue client, Express server and Postgres database.
 
 ## How to use
 
 ```shell
-$ docker compose up -d
+$ docker-compose -f compose.prod.yaml up -d
+$ docker-compose -f compose.prod.yaml down
 ```
 
 Then go to http://localhost:8080
 
 ## Development
 
-### Server
-
 ```shell
-$ cd server
+$ docker-compose up
+```
+- [client](http://localhost:5173)
+- [adminer](http://localhost:8080) (user: postgres, password: changeit)
+- [Thunder client](http://localhost:3000/self) (use HTTP Headers Cookie:sid="from browser devtools")
 
-# start the PostgreSQL database
-$ docker compose up -d
-
-# start the server
-$ npm run dev
+Run tests
+```shell
+$ docker exec -it express_container bash
+$ cd app
+$ npm run test
 ```
 
-### Client
-
+Open postgres in terminal
 ```shell
-$ cd vue-client
-
-# start the client
-$ npm run dev
+$ docker exec -it pg_container bash
+$ psql -U postgres
 ```
 
-Then go to http://localhost:5173
-
-## Data model
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/data_model_dark.png">
-  <img alt="Data model" src="./assets/data_model.png">
-</picture>
+Get ip for wifi (like 192.168.1.5) to browse from phone
+```shell
+$ ifconfig | grep inet
+```
