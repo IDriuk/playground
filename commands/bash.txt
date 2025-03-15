@@ -9,6 +9,9 @@ Windows (CMD or PowerShell):
 ipconfig
 
 
+
+// Create ssh for github, publish to gh-pages, add storybook to vite
+
 ssh-keygen -t ed25519 -C "your_email@example.com"
 cp -r ./ /app
 root/.ssh
