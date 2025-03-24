@@ -51,6 +51,8 @@ psql -h localhost -U postgres
 
 
 https://www.postgresqltutorial.com/postgresql-getting-started/postgresql-sample-database/
+https://pgexercises.com/
+
 DROP DATABASE IF EXISTS dvdrental;
 CREATE DATABASE dvdrental;
 
