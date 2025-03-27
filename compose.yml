@@ -1,0 +1,10 @@
+services:
+  client:
+    image: node:23.9
+    container_name: tailwind_container
+    ports:
+      - 5173:5173
+      - 6006:6006
+    volumes:
+      - ./:/app
+    command: bash -c "cd /app && yarn install && yarn dev --host"

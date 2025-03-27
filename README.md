@@ -1,8 +1,7 @@
+# Tailwind
+Branch for experiments with tailwind.
 
-# Playground
-Project for experimenting with different technologies and testing tasks.
-
-## References
+## Main references
 - [Docs](https://github.com/IDriuk/playground/tree/docs)
 - [Chat](https://github.com/IDriuk/playground/tree/chat)
 - [Redux Express Postgres App](https://github.com/IDriuk/playground/tree/redux_express_postgres)
