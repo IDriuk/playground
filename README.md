@@ -1,43 +1,5 @@
 # Tailwind
-Branch for experiments with tailwind.
-
-## Working log
-[tailwind with react-router docs](https://tailwindcss.com/docs/installation/framework-guides/react-router)
-[react-router docs](https://reactrouter.com/home)
-```
-docker run -it --rm -p 3000:3000 -v ${PWD}:/app --name server node bash           
-cd app
-npx create-react-router@latest tailwind
-cd tailwind
-npm install
-npm run dev
-rm -rf node_modules
-cp -r . /app
-```
-
-run app and use bash in container
-``` 
-docker-compose up
-docker exec -it tailwind_container bash
-```
-https://storybook.js.org/recipes/tailwindcss#2-provide-tailwind-to-stories
-``` 
-  npm create storybook@latest 
-  "storybook": "storybook dev -p 6006 --host 0.0.0.0 --no-open",
-```
-
-didn't work
-
-
-```
-npx degit chromaui/intro-storybook-react-template taskbox
-yarn add tailwindcss @tailwindcss/vite
-
-https://storybook.js.org/tutorials/intro-to-storybook/react/en/get-started/
-https://tailwindcss.com/docs/installation/using-vite
-https://github.com/audunru/tailwind-storybook/tree/main
-
-
+Branch for experiments with tailwind, storybook and gh-pages.
 
 ## Main references
 - [Home](https://github.com/IDriuk/playground/)
@@ -50,6 +12,41 @@ https://github.com/audunru/tailwind-storybook/tree/main
 - [Express.js with docker compose](https://github.com/IDriuk/playground/tree/express_dev)
 - [Gh pages and storybook](https://github.com/IDriuk/playground/tree/gh_pages_storybook)
 - [React router app with Docker for development](https://github.com/IDriuk/playground/tree/react_router_dev)
+
+
+## Working log
+https://storybook.js.org/tutorials/intro-to-storybook/react/en/get-started/
+https://tailwindcss.com/docs/installation/using-vite
+https://github.com/audunru/tailwind-storybook/tree/main
+
+```
+docker run -it --rm -p 3000:3000 -v ${PWD}:/app --name server node bash  
+npx degit chromaui/intro-storybook-react-template taskbox
+
+docker-compose up
+docker exec -it tailwind_container bash
+yarn add tailwindcss @tailwindcss/vite
+
+
+add plugin to vite config,
+import tailwind to index.css, 
+import index.css to storybook preview
+```
+
+set in package.json to run storybook in docker 
+"storybook": "storybook dev -p 6006 --host 0.0.0.0 --no-open",
+
+update package.json to use gh-pages (predeploy, deploy, home)
+```
+cp -r ssh/* ~/.ssh
+git config --global user.email "veytarn@gmail.com"
+git config --global user.name "Ivan Driuk"
+yarn install
+yarn deploy
+```
+
+
+
 
 
 <p align="center">
