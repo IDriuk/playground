@@ -20,6 +20,13 @@ run app and use bash in container
 docker-compose up
 docker exec -it tailwind_container bash
 ```
+https://storybook.js.org/recipes/tailwindcss#2-provide-tailwind-to-stories
+``` 
+  npm create storybook@latest 
+  "storybook": "storybook dev -p 6006 --host 0.0.0.0 --no-open",
+```
+
+didn't work
 
 ## Main references
 - [Home](https://github.com/IDriuk/playground/)
