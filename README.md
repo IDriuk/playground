@@ -2,6 +2,7 @@
 Branch for experiments with tailwind.
 
 ## Main references
+- [Home](https://github.com/IDriuk/playground/)
 - [Docs](https://github.com/IDriuk/playground/tree/docs)
 - [Chat](https://github.com/IDriuk/playground/tree/chat)
 - [Redux Express Postgres App](https://github.com/IDriuk/playground/tree/redux_express_postgres)
