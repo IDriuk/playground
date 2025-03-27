@@ -12,3 +12,4 @@ Project for experimenting with different technologies and testing tasks.
 - [Express.js with docker compose](https://github.com/IDriuk/playground/tree/express_dev)
 - [Gh pages and storybook](https://github.com/IDriuk/playground/tree/gh_pages_storybook)
 - [React router app with Docker for development](https://github.com/IDriuk/playground/tree/react_router_dev)
+- [Tailwind](https://github.com/IDriuk/playground/tree/tailwind)
