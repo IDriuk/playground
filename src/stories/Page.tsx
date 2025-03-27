@@ -19,6 +19,7 @@ export const Page: React.FC = () => {
         onCreateAccount={() => setUser({ name: "Jane Doe" })}
       />
 
+      <div className="bg-amber-600">234234</div>
       <section className="storybook-page">
         <h2>Pages in Storybook</h2>
         <p>

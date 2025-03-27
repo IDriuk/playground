@@ -31,6 +31,12 @@ didn't work
 
 ```
 npx degit chromaui/intro-storybook-react-template taskbox
+yarn add tailwindcss @tailwindcss/vite
+
+https://storybook.js.org/tutorials/intro-to-storybook/react/en/get-started/
+https://tailwindcss.com/docs/installation/using-vite
+https://github.com/audunru/tailwind-storybook/tree/main
+
 
 
 ## Main references
