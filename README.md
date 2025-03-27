@@ -46,6 +46,9 @@ yarn install
 yarn deploy
 ```
 
+https://idriuk.github.io/playground/ - github
+http://localhost:5173/playground/ - dev
+http://localhost:6006/?path=/docs/example-button--docs - storybook
 
 
 
