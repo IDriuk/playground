@@ -2,6 +2,8 @@
 Branch for experiments with tailwind.
 
 ## Working log
+[tailwind with react-router docs](https://tailwindcss.com/docs/installation/framework-guides/react-router)
+[react-router docs](https://reactrouter.com/home)
 ```
 docker run -it --rm -p 3000:3000 -v ${PWD}:/app --name server node bash           
 cd app
@@ -11,6 +13,12 @@ npm install
 npm run dev
 rm -rf node_modules
 cp -r . /app
+```
+
+run app and use bash in container
+``` 
+docker-compose up
+docker exec -it tailwind_container bash
 ```
 
 ## Main references
