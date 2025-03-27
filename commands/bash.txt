@@ -21,6 +21,8 @@ yarn add gh-pages --dev
 git config --global user.email "veytarn@gmail.com"
 git config --global user.name "Ivan Driuk"
 
+update home in package.json
+
 yarn deploy
 
 Repo settings / choose gh-pages
