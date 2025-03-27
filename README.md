@@ -1,3 +1,31 @@
+# Tailwind
+Branch for experiments with tailwind.
+
+## Working log
+```
+docker run -it --rm -p 3000:3000 -v ${PWD}:/app --name server node bash           
+cd app
+npx create-react-router@latest tailwind
+cd tailwind
+npm install
+npm run dev
+rm -rf node_modules
+cp -r . /app
+```
+
+## Main references
+- [Home](https://github.com/IDriuk/playground/)
+- [Docs](https://github.com/IDriuk/playground/tree/docs)
+- [Chat](https://github.com/IDriuk/playground/tree/chat)
+- [Redux Express Postgres App](https://github.com/IDriuk/playground/tree/redux_express_postgres)
+- [Redux Express Postgres App on Render](https://playground-pb7l.onrender.com/) for production hosting
+- [Postgres with docker compose](https://github.com/IDriuk/playground/tree/postgres_dev)
+- [Node with Postgres](https://github.com/IDriuk/playground/tree/node_pg)
+- [Express.js with docker compose](https://github.com/IDriuk/playground/tree/express_dev)
+- [Gh pages and storybook](https://github.com/IDriuk/playground/tree/gh_pages_storybook)
+- [React router app with Docker for development](https://github.com/IDriuk/playground/tree/react_router_dev)
+
+
 # Welcome to React Router!
 
 A modern, production-ready template for building full-stack React applications using React Router.
