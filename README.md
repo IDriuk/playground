@@ -37,6 +37,7 @@ set in package.json to run storybook in docker
 "storybook": "storybook dev -p 6006 --host 0.0.0.0 --no-open",
 
 update package.json to use gh-pages (predeploy, deploy, home)
+update vite.config.js to use base playground
 ```
 cp -r ssh/* ~/.ssh
 git config --global user.email "veytarn@gmail.com"
