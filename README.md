@@ -10,7 +10,6 @@ Branch for experiments with tailwind, storybook and gh-pages.
 - [Postgres with docker compose](https://github.com/IDriuk/playground/tree/postgres_dev)
 - [Node with Postgres](https://github.com/IDriuk/playground/tree/node_pg)
 - [Express.js with docker compose](https://github.com/IDriuk/playground/tree/express_dev)
-- [Gh pages and storybook](https://github.com/IDriuk/playground/tree/gh_pages_storybook)
 - [React router app with Docker for development](https://github.com/IDriuk/playground/tree/react_router_dev)
 
 
