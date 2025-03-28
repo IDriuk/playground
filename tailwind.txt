@@ -1,0 +1,74 @@
+let styles = getComputedStyle(document.documentElement);
+let shadow = styles.getPropertyValue("--shadow-xl");
+
+<style>
+  @reference "../../app.css";
+  h1 {
+    @apply text-2xl font-bold text-red-500;
+  }
+</style>
+
+arbitrary values like bg-[#316ff6]
+
+variant hover:bg-sky-700
+
+export function BrandedButton({ buttonColor, buttonColorHover, textColor, children }) {
+  return (
+    <button
+      style={{
+        "--bg-color": buttonColor,
+        "--bg-color-hover": buttonColorHover,
+        "--text-color": textColor,
+      }}
+      className="bg-(--bg-color) text-(--text-color) hover:bg-(--bg-color-hover) ..."
+    >
+      {children}
+    </button>
+  );
+}
+
+@import "tailwindcss";
+@layer components {
+  .btn-primary {
+    border-radius: calc(infinity * 1px);
+    background-color: var(--color-violet-500);
+    padding-inline: --spacing(5);
+    padding-block: --spacing(2);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-white);
+    box-shadow: var(--shadow-md);
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-violet-700);
+      }
+    }
+  }
+}
+
+bg-red-500!
+
+
+@import "tailwindcss" important;
+@layer utilities {
+  .flex {
+    display: flex !important;
+  }
+  .gap-4 {
+    gap: 1rem !important;
+  }
+  .underline {
+    text-decoration-line: underline !important;
+  }
+}
+
+@import "tailwindcss" prefix(tw);
+@layer theme {
+  :root {
+    --tw-color-red-500: oklch(0.637 0.237 25.331);
+  }
+}
+@layer utilities {
+  .tw\:text-red-500 {
+    color: var(--tw-color-red-500);
+  }
+}
