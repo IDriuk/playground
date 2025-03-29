@@ -1,3 +1,4 @@
+arbitrary values:
 let styles = getComputedStyle(document.documentElement);
 let shadow = styles.getPropertyValue("--shadow-xl");
 
@@ -8,24 +9,13 @@ let shadow = styles.getPropertyValue("--shadow-xl");
   }
 </style>
 
-arbitrary values like bg-[#316ff6]
+style={{
+  "--bg-color": buttonColor,
+  "--bg-color-hover": buttonColorHover,
+  "--text-color": textColor,
+}}
+className="bg-(--bg-color) text-(--text-color) hover:bg-(--bg-color-hover) ..."
 
-variant hover:bg-sky-700
-
-export function BrandedButton({ buttonColor, buttonColorHover, textColor, children }) {
-  return (
-    <button
-      style={{
-        "--bg-color": buttonColor,
-        "--bg-color-hover": buttonColorHover,
-        "--text-color": textColor,
-      }}
-      className="bg-(--bg-color) text-(--text-color) hover:bg-(--bg-color-hover) ..."
-    >
-      {children}
-    </button>
-  );
-}
 
 @import "tailwindcss";
 @layer components {
@@ -44,8 +34,6 @@ export function BrandedButton({ buttonColor, buttonColorHover, textColor, childr
     }
   }
 }
-
-bg-red-500!
 
 
 @import "tailwindcss" important;
@@ -72,3 +60,97 @@ bg-red-500!
     color: var(--tw-color-red-500);
   }
 }
+
+
+block 
+hidden
+relative
+absolute 
+grid 
+grid-cols-3
+grid-cols-4 
+grid-cols-6
+[--gutter-width:1rem] lg:[--gutter-width:2rem]
+grid-cols-[24rem_2.5rem_minmax(0,1fr)]
+flex 
+flex-col 
+flex-row
+w-full
+size-12
+max-h-[calc(100dvh-(--spacing(6))]
+-inset-1
+pt-0
+px-2 
+py-0.5 
+mr-4
+truncate
+overflow-hidden
+rounded-full
+bg-violet-600 
+bg-red-500!
+bg-gray-900/50 
+bg-(--bg-color-hover)
+bg-[#316ff6]
+text-pink-600 
+border
+border-pink-500 
+outline 
+outline-2 
+outline-sky-500 
+shadow-none 
+underline
+cursor-grabbing
+
+md:
+lg:
+hover:
+focus:
+active:
+invalid:
+disabled:
+first:
+even:
+odd:
+nth-3:
+dark:
+file:
+marker:
+selection
+portrait:hidden
+landscape:hidden
+*:
+**:
+
+*:px-2 
+dark:*:bg-sky-500/10
+
+has-checked:bg-indigo-50
+has-[:focus]
+has-[img]
+
+group
+  group-has-[a]:block 
+  group-hover:stroke-white
+  in-focus:opacity-100
+
+group is-published
+  group-[.is-published]:block
+
+peer
+peer-has-checked:hidden
+
+@container
+  @md:flex-row
+
+
+*:border *:border-sky-100 
+
+**:data-avatar:size-12 
+  data-avatar
+
+[&_p]:mt-4
+  p
+
+[&.is-dragging]:active:cursor-grabbing
+
+https://tailwindcss.com/docs/hover-focus-and-other-states#quick-reference
