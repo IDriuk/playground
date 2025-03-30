@@ -78,6 +78,9 @@ grid-cols-[24rem_2.5rem_minmax(0,1fr)]
 flex 
 flex-col 
 flex-row
+inline-flex 
+items-center 
+justify-center
 shrink-0
 w-full
 h-full
@@ -88,6 +91,7 @@ max-w-md
 max-w-2xl
 max-h-[calc(100dvh-(--spacing(6))]
 object-cover
+inset-px
 -inset-1
 -skew-y-3
 translate-x-0.5
@@ -106,6 +110,7 @@ bg-red-500!
 bg-gray-900/50 
 bg-(--bg-color-hover)
 bg-[#316ff6] 
+text-base
 text-sm
 text-xl
 text-black
@@ -114,26 +119,30 @@ text-center
 placeholder-gray-400
 font-medium
 font-semibold
+font-sans
 leading-tight
 tracking-widest
 tracking-wide
+tracking-tight
 uppercase
 underline
 border
 border-pink-500 
 rounded-full
 rounded-md
+rounded-xl
+rounded-[calc(var(--radius-xl)-1px)]
 outline 
 outline-2 
 outline-sky-500 
 shadow-none 
 shadow-sm
 shadow-md
+ring 
+ring-gray-900/5
 cursor-grabbing
 divide-y
 divide-gray-200
-
-
 
 sm:
 md:
@@ -237,34 +246,63 @@ xl
 
 md:max-xl:flex
 
-@import "tailwindcss";
-@theme {
-  --breakpoint-xs: 30rem;
-  --breakpoint-2xl: 100rem;
-  --breakpoint-3xl: 120rem;
-}
-
-@import "tailwindcss";
-@theme {
-  --breakpoint-*: initial;
-  --breakpoint-tablet: 40rem;
-  --breakpoint-laptop: 64rem;
-  --breakpoint-desktop: 80rem;
-}
-
 @container/main
   @sm/main:flex-col
-
-
-@import "tailwindcss";
-@theme {
-  --container-8xl: 96rem;
-}
-@container
-  @8xl:flex-row
-
 
 @container
   w-[50cqw]
 
 https://tailwindcss.com/docs/responsive-design#container-size-reference
+
+https://tailwindcss.com/docs/dark-mode
+prefers-color-scheme
+
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+<html class="dark">
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+<html data-theme="dark">
+
+document.documentElement.classList.toggle(
+  "dark",
+  localStorage.theme === "dark" ||
+    (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches),
+);
+localStorage.theme = "light";
+localStorage.theme = "dark";
+localStorage.removeItem("theme");
+
+https://tailwindcss.com/docs/theme
+theme variables
+
+@import "tailwindcss";
+@theme {
+  --*: initial;
+  --color-*: initial;
+  --color-primary: var(--color-red-500);
+  --color-secondary: var(--color-blue-500);
+  --color-mint-500: oklch(0.72 0.11 178);
+  --font-poppins: Poppins, sans-serif;
+  --breakpoint-3xl: 120rem;
+  --container-8xl: 96rem;
+}
+bg-mint-500
+background-color: var(--color-mint-500)
+font-poppins
+3xl:grid-cols-6
+@container
+  @8xl:flex-row
+
+
+:root - without utility classes
+@theme static  - always generating all css variables
+
+@import "tailwindcss";
+@import "../brand/theme.css";
+
+
+https://tailwindcss.com/docs/theme#theme-variable-namespaces
+https://tailwindcss.com/docs/theme#default-theme-variable-reference
+https://examples.motion.dev/
+https://www.react-spring.dev/ 
