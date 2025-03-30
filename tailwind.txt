@@ -73,8 +73,6 @@ grid
 grid-cols-3
 grid-cols-4 
 grid-cols-6
-[--gutter-width:1rem] lg:[--gutter-width:2rem]
-grid-cols-[24rem_2.5rem_minmax(0,1fr)]
 flex 
 flex-col 
 flex-row
@@ -130,6 +128,7 @@ uppercase
 underline
 border
 border-pink-500 
+rounded-none
 rounded-full
 rounded-md
 rounded-xl
@@ -260,22 +259,6 @@ https://tailwindcss.com/docs/responsive-design#container-size-reference
 https://tailwindcss.com/docs/dark-mode
 prefers-color-scheme
 
-@import "tailwindcss";
-@custom-variant dark (&:where(.dark, .dark *));
-<html class="dark">
-
-@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
-<html data-theme="dark">
-
-document.documentElement.classList.toggle(
-  "dark",
-  localStorage.theme === "dark" ||
-    (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches),
-);
-localStorage.theme = "light";
-localStorage.theme = "dark";
-localStorage.removeItem("theme");
-
 https://tailwindcss.com/docs/theme
 theme variables
 
@@ -321,3 +304,129 @@ https://www.react-spring.dev/
 @theme inline {
   --color-canvas: var(--acme-canvas-color);
 }
+
+https://tailwindcss.com/docs/adding-custom-styles
+top-[117px]
+bg-[#bada55] 
+text-[22px] 
+before:content-['Festivus']
+
+fill-(--my-brand-color)
+fill-[var(--my-brand-color)]
+
+
+[--gutter-width:1rem] lg:[--gutter-width:2rem]
+[mask-type:luminance] hover:[mask-type:alpha]
+[--scroll-offset:56px] lg:[--scroll-offset:44px]
+
+lg:[&:nth-child(-n+3)]:hover:underline
+
+grid-cols-[1fr_500px_2fr]
+grid-cols-[24rem_2.5rem_minmax(0,1fr)]
+
+bg-[url('/what_a_rush.png')]
+before:content-['hello\_world']
+String.raw`before:content-['hello\_world']`
+
+text-(length:--my-var)
+text-(color:--my-var)
+
+@layer base {
+  h1 {
+    font-size: var(--text-2xl);
+  }
+  h2 {
+    font-size: var(--text-xl);
+  }
+}
+
+@layer components {
+  .card {
+    background-color: var(--color-white);
+    border-radius: var(--rounded-lg);
+    padding: var(--spacing-6);
+    box-shadow: var(--shadow-xl);
+  }
+}
+
+.my-element {
+  background: white;
+  @variant dark {
+    @variant hover {
+      background: black;
+    }
+  }
+}
+.my-element {
+  background: white;
+  @media (prefers-color-scheme: dark) {
+    &:hover {
+      @media (hover: hover) {
+        background: black;
+      }
+    }
+  }
+}
+
+@utility content-auto {
+  content-visibility: auto;
+}
+
+@utility scrollbar-hidden {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@theme {
+  --tab-size-2: 2;
+  --tab-size-4: 4;
+  --tab-size-github: 8;
+}
+@utility tab-* {
+  tab-size: --value(--tab-size-*);
+}
+tab-2, tab-4 and tab-github
+
+
+@utility tab-* {
+  tab-size: --value(integer);
+}
+tab-1 and tab-76
+
+@utility aspect-* {
+  aspect-ratio: --value(--aspect-ratio-*, ratio, [ratio]);
+}
+aspect-square, aspect-3/4, and aspect-[7/9]
+
+@utility text-* {
+  font-size: --value(--text-*, [length]);
+  line-height: --modifier(--leading-*, [length], [*]);
+}
+
+@custom-variant theme-midnight (&:where([data-theme="midnight"] *));
+@custom-variant theme-midnight {
+  &:where([data-theme="midnight"] *) {
+    @slot;
+  }
+}
+<html data-theme="midnight">
+  <button class="theme-midnight:bg-black ..."></button>
+</html>
+
+
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+<html class="dark">
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+<html data-theme="dark">
+
+document.documentElement.classList.toggle(
+  "dark",
+  localStorage.theme === "dark" ||
+    (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches),
+);
+localStorage.theme = "light";
+localStorage.theme = "dark";
+localStorage.removeItem("theme");
