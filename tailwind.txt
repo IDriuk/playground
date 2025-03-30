@@ -81,6 +81,7 @@ flex-row
 inline-flex 
 items-center 
 justify-center
+gap-4
 shrink-0
 w-full
 h-full
@@ -105,6 +106,7 @@ ml-3
 mx-auto
 truncate
 overflow-hidden
+overflow-auto 
 bg-violet-600 
 bg-red-500!
 bg-gray-900/50 
@@ -140,6 +142,7 @@ shadow-sm
 shadow-md
 ring 
 ring-gray-900/5
+stroke-pink-700
 cursor-grabbing
 divide-y
 divide-gray-200
@@ -306,3 +309,15 @@ https://tailwindcss.com/docs/theme#theme-variable-namespaces
 https://tailwindcss.com/docs/theme#default-theme-variable-reference
 https://examples.motion.dev/
 https://www.react-spring.dev/ 
+
+
+@import "tailwindcss";
+:root {
+  --acme-canvas-color: oklch(0.967 0.003 264.542);
+}
+[data-theme="dark"] {
+  --acme-canvas-color: oklch(0.21 0.034 264.665);
+}
+@theme inline {
+  --color-canvas: var(--acme-canvas-color);
+}
