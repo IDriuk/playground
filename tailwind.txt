@@ -4,7 +4,9 @@ hidden
 visible
 invisible
 relative
+isolate
 absolute 
+z-10
 float-left
 columns-3
 grid 
@@ -65,8 +67,20 @@ left-0
 start-0
 -top-4 
 -left-4
+transition 
+transition-all 
+transition-discrete
+delay-150 
+duration-300 
+ease-in-out
 -skew-y-3
 translate-x-0.5
+-translate-6
+rotate-45
+scale-75
+transform-none
+origin-right
+transform-3d
 aspect-3/2
 aspect-video
 p-6
@@ -79,12 +93,15 @@ mr-4
 ml-3
 -mt-8
 mx-auto
-z-0
 bg-violet-600 
 bg-red-500!
 bg-gray-900/50 
 bg-(--bg-color-hover) 
 bg-[#316ff6] 
+bg-gradient-to-r 
+from-pink-500 
+to-violet-500 
+bg-clip-text 
 text-base
 text-sm
 text-sm/6
@@ -94,6 +111,10 @@ text-black
 text-pink-600
 text-(--text-color)
 text-center
+inline-block 
+align-middle
+whitespace-pre
+break-all
 placeholder-gray-400
 font-medium
 font-semibold
@@ -113,6 +134,8 @@ overflow-hidden
 overflow-auto 
 border
 border-pink-500 
+border-collapse
+border-separate
 rounded-none
 rounded-full
 rounded-md
@@ -124,15 +147,28 @@ outline-sky-500
 shadow-none 
 shadow-sm
 shadow-md
+drop-shadow-md
 ring 
 ring-gray-900/5
 stroke-pink-700
+fill-blue-500
 fill-(--my-brand-color)
 fill-[var(--my-brand-color)]
-cursor-grabbing
+stroke-current
+stroke-2
+blur-xs
 divide-y
 divide-gray-200
-
+accent-pink-500
+caret-rose-500
+appearance-none
+scheme-dark
+cursor-grabbing
+select-text
+resize
+scroll-pl-6
+snap-x
+ snap-center
 
 https://tailwindcss.com/docs/hover-focus-and-other-states#quick-reference
 https://tailwindcss.com/docs/responsive-design#container-size-reference
@@ -193,6 +229,7 @@ group/item
 
 peer
 peer-has-checked:hidden
+not-peer-has-checked
 
 @container
   @md:flex-row
@@ -427,54 +464,13 @@ https://tailwindcss.com/docs/functions-and-directives#functions
 https://tailwindcss.com/docs/preflight
 https://github.com/sindresorhus/modern-normalize
 
-inline-block align-middle
+after:content-['_↗']
+before="Hello World" before:content-[attr(before)]
+before:content-['Hello_World']
 
-whitespace-pre
 
-break-all
+https://www.youtube.com/watch?v=-h9rH539x1k
+https://play.tailwindcss.com/P4CmmkDXaB
 
-<a class="text-blue-600 after:content-['_↗']" href="...">
-<p before="Hello World" class="before:content-[attr(before)] ...">
-  <!-- ... -->
-</p>
-<p class="before:content-['Hello_World'] ...">
-  <!-- ... -->
-</p>
-
-bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-center text-4xl leading-none font-extrabold tracking-tight text-transparent sm:text-5xl
-
-blur-xs
-
-<svg class="drop-shadow-md ...">
-
-border-collapse
-border-separate
-
-transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500
-
-<button class="hidden transition-all transition-discrete not-peer-has-checked:opacity-0 peer-has-checked:block ...">
-
-rotate-45
-scale-75
-skew-3
--translate-6
-transform-none
-origin-right
-transform-3d
-
-accent-pink-500
-appearance-none
-caret-rose-500
-scheme-dark
-cursor-progress
-resize
-scroll-pl-6
-
-snap-x
- snap-center
-
-select-text
-
-fill-blue-500
-stroke-current
-stroke-2
+https://www.youtube.com/watch?v=X3-4jwm4Z4Y
+https://play.tailwindcss.com/SIHJT7S215
