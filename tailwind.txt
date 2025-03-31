@@ -71,8 +71,6 @@ absolute
 float-left
 grid 
 grid-cols-3
-grid-cols-4 
-grid-cols-6
 flex 
 flex-col 
 flex-row
@@ -92,6 +90,7 @@ max-h-[calc(100dvh-(--spacing(6))]
 object-cover
 inset-px
 -inset-1
+top-[117px]
 -skew-y-3
 translate-x-0.5
 p-6
@@ -113,6 +112,7 @@ bg-[#316ff6]
 text-base
 text-sm
 text-xl
+text-[22px] 
 text-black
 text-pink-600
 text-center
@@ -142,16 +142,24 @@ shadow-md
 ring 
 ring-gray-900/5
 stroke-pink-700
+fill-(--my-brand-color)
+fill-[var(--my-brand-color)]
 cursor-grabbing
 divide-y
 divide-gray-200
 
+
+https://tailwindcss.com/docs/hover-focus-and-other-states#quick-reference
+https://tailwindcss.com/docs/responsive-design#container-size-reference
+
 sm:
 md:
 lg:
+2xl:
 max-xl:
 min-[320px]
 max-[600px]:
+md:max-xl:
 @md:
 @max-md:
 @min-[475px]:
@@ -202,6 +210,11 @@ peer-has-checked:hidden
 @container
   @md:flex-row
 
+@container/main
+  @sm/main:flex-col
+
+@container
+  w-[50cqw]
 
 *:border *:border-sky-100 
 
@@ -213,7 +226,10 @@ peer-has-checked:hidden
 
 [&.is-dragging]:active:cursor-grabbing
 
-https://tailwindcss.com/docs/hover-focus-and-other-states#quick-reference
+lg:[&:nth-child(-n+3)]:hover:underline
+
+grid-cols-[1fr_500px_2fr]
+grid-cols-[24rem_2.5rem_minmax(0,1fr)]
 
 divide-y
 .divide-y {
@@ -230,36 +246,27 @@ divide-y
   inherits: false;
   initial-value: 0;
 }
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 
-
-https://tailwindcss.com/docs/responsive-design
-
-w-16 md:w-32 lg:w-48
-sm 
-md
-lg
-xl
-2xl
-
-md:max-xl:flex
-
-@container/main
-  @sm/main:flex-col
-
-@container
-  w-[50cqw]
-
-https://tailwindcss.com/docs/responsive-design#container-size-reference
 
 https://tailwindcss.com/docs/dark-mode
 prefers-color-scheme
 
-https://tailwindcss.com/docs/theme
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+<html class="dark">
+
+document.documentElement.classList.toggle(
+  "dark",
+  localStorage.theme === "dark" ||
+    (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches),
+);
+localStorage.theme = "light";
+localStorage.theme = "dark";
+localStorage.removeItem("theme");
+
+
+https://tailwindcss.com/docs/theme#theme-variable-namespaces
+https://tailwindcss.com/docs/theme#default-theme-variable-reference
 theme variables
 
 @import "tailwindcss";
@@ -280,19 +287,11 @@ font-poppins
 @container
   @8xl:flex-row
 
-
 :root - without utility classes
 @theme static  - always generating all css variables
 
 @import "tailwindcss";
 @import "../brand/theme.css";
-
-
-https://tailwindcss.com/docs/theme#theme-variable-namespaces
-https://tailwindcss.com/docs/theme#default-theme-variable-reference
-https://examples.motion.dev/
-https://www.react-spring.dev/ 
-
 
 @import "tailwindcss";
 :root {
@@ -306,30 +305,17 @@ https://www.react-spring.dev/
 }
 
 https://tailwindcss.com/docs/adding-custom-styles
-top-[117px]
-bg-[#bada55] 
-text-[22px] 
-before:content-['Festivus']
 
-fill-(--my-brand-color)
-fill-[var(--my-brand-color)]
-
+text-(length:--my-var)
+text-(color:--my-var)
 
 [--gutter-width:1rem] lg:[--gutter-width:2rem]
 [mask-type:luminance] hover:[mask-type:alpha]
 [--scroll-offset:56px] lg:[--scroll-offset:44px]
 
-lg:[&:nth-child(-n+3)]:hover:underline
-
-grid-cols-[1fr_500px_2fr]
-grid-cols-[24rem_2.5rem_minmax(0,1fr)]
-
 bg-[url('/what_a_rush.png')]
 before:content-['hello\_world']
 String.raw`before:content-['hello\_world']`
-
-text-(length:--my-var)
-text-(color:--my-var)
 
 @layer base {
   h1 {
@@ -347,26 +333,17 @@ text-(color:--my-var)
     padding: var(--spacing-6);
     box-shadow: var(--shadow-xl);
   }
-}
 
-.my-element {
-  background: white;
-  @variant dark {
-    @variant hover {
-      background: black;
-    }
-  }
-}
-.my-element {
-  background: white;
-  @media (prefers-color-scheme: dark) {
-    &:hover {
-      @media (hover: hover) {
+  .my-element {
+    background: white;
+    @variant dark {
+      @variant hover {
         background: black;
       }
     }
   }
 }
+
 
 @utility content-auto {
   content-visibility: auto;
@@ -388,45 +365,10 @@ text-(color:--my-var)
 }
 tab-2, tab-4 and tab-github
 
-
-@utility tab-* {
-  tab-size: --value(integer);
-}
-tab-1 and tab-76
-
-@utility aspect-* {
-  aspect-ratio: --value(--aspect-ratio-*, ratio, [ratio]);
-}
-aspect-square, aspect-3/4, and aspect-[7/9]
-
 @utility text-* {
   font-size: --value(--text-*, [length]);
   line-height: --modifier(--leading-*, [length], [*]);
 }
 
-@custom-variant theme-midnight (&:where([data-theme="midnight"] *));
-@custom-variant theme-midnight {
-  &:where([data-theme="midnight"] *) {
-    @slot;
-  }
-}
-<html data-theme="midnight">
-  <button class="theme-midnight:bg-black ..."></button>
-</html>
-
-
-@import "tailwindcss";
-@custom-variant dark (&:where(.dark, .dark *));
-<html class="dark">
-
-@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
-<html data-theme="dark">
-
-document.documentElement.classList.toggle(
-  "dark",
-  localStorage.theme === "dark" ||
-    (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches),
-);
-localStorage.theme = "light";
-localStorage.theme = "dark";
-localStorage.removeItem("theme");
+https://examples.motion.dev/
+https://www.react-spring.dev/ 
