@@ -42,13 +42,18 @@ grow
 order-first
 gap-4
 gap-x-8
-w-full
 h-full
-w-10
 h-10 
+h-dvh
+w-full
+w-screen
+w-10
+w-3/5
+w-3xs
 size-12
 max-w-md
 max-w-2xl
+max-w-9/10
 max-h-[calc(100dvh-(--spacing(6))]
 object-cover
 object-center
@@ -72,11 +77,9 @@ pt-0
 pb-0
 mr-4
 ml-3
+-mt-8
 mx-auto
 z-0
-truncate
-overflow-hidden
-overflow-auto 
 bg-violet-600 
 bg-red-500!
 bg-gray-900/50 
@@ -95,12 +98,19 @@ placeholder-gray-400
 font-medium
 font-semibold
 font-sans
+not-italic
 leading-tight
 tracking-widest
 tracking-wide
 tracking-tight
 uppercase
 underline
+no-underline
+line-clamp-3
+line-clamp-none
+truncate
+overflow-hidden
+overflow-auto 
 border
 border-pink-500 
 rounded-none
@@ -416,3 +426,55 @@ https://tailwindcss.com/docs/functions-and-directives#functions
 
 https://tailwindcss.com/docs/preflight
 https://github.com/sindresorhus/modern-normalize
+
+inline-block align-middle
+
+whitespace-pre
+
+break-all
+
+<a class="text-blue-600 after:content-['_↗']" href="...">
+<p before="Hello World" class="before:content-[attr(before)] ...">
+  <!-- ... -->
+</p>
+<p class="before:content-['Hello_World'] ...">
+  <!-- ... -->
+</p>
+
+bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-center text-4xl leading-none font-extrabold tracking-tight text-transparent sm:text-5xl
+
+blur-xs
+
+<svg class="drop-shadow-md ...">
+
+border-collapse
+border-separate
+
+transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500
+
+<button class="hidden transition-all transition-discrete not-peer-has-checked:opacity-0 peer-has-checked:block ...">
+
+rotate-45
+scale-75
+skew-3
+-translate-6
+transform-none
+origin-right
+transform-3d
+
+accent-pink-500
+appearance-none
+caret-rose-500
+scheme-dark
+cursor-progress
+resize
+scroll-pl-6
+
+snap-x
+ snap-center
+
+select-text
+
+fill-blue-500
+stroke-current
+stroke-2

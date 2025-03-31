@@ -5,6 +5,26 @@ function App() {
 
   return (
     <>
+      <div className="overflow-auto rounded-lg bg-white outline outline-white/5 dark:bg-gray-950/50 p-8">
+        <div className="flex items-center justify-center">
+          <div className="-lg h-28 w-full max-w-xs rounded-lg bg-white p-4 ring-1 ring-gray-900/5 dark:bg-gray-800">
+            <div className="flex animate-pulse space-x-4">
+              <div className="size-10 rounded-full bg-gray-200 dark:bg-gray-700"></div>
+              <div className="flex-1 space-y-6 py-1">
+                <div className="h-2 rounded bg-gray-200 dark:bg-gray-700"></div>
+                <div className="space-y-3">
+                  <div className="grid grid-cols-3 gap-4">
+                    <div className="col-span-2 h-2 rounded bg-gray-200 dark:bg-gray-700"></div>
+                    <div className="col-span-1 h-2 rounded bg-gray-200 dark:bg-gray-700"></div>
+                  </div>
+                  <div className="h-2 rounded bg-gray-200 dark:bg-gray-700"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="mx-auto flex max-w-sm items-center gap-x-4 rounded-xl bg-white m-2 p-6 shadow-lg outline outline-black/5 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10">
         <img className="size-12 shrink-0" src={logo} alt="ChitChat Logo" />
         <div>
