@@ -1,0 +1,485 @@
+block 
+inline
+inline-block
+hidden
+visible
+invisible
+relative
+isolate
+absolute 
+z-10
+float-left
+columns-3
+
+grid 
+grid-flow-col
+grid-flow-row-dense 
+auto-cols-min
+grid-cols-3
+col-span-2
+col-start-3
+col-end-4
+col-span-full
+grid-rows-4
+row-span-full
+grid-rows-subgrid
+gap-4
+gap-x-8
+content-center
+place-content-center
+justify-items-start
+justify-self-center
+
+flex 
+flex-wrap
+flex-nowrap
+flex-col 
+flex-row
+inline-flex 
+justify-center
+items-baseline
+self-center
+flex-1
+flex-initial
+flex-auto
+flex-none
+basis-64
+shrink-0
+grow
+order-first
+
+h-full
+h-10 
+h-dvh
+w-full
+w-screen
+w-10
+w-3/5
+w-3xs
+size-12
+max-w-md
+max-w-2xl
+max-w-9/10
+max-h-[calc(100dvh-(--spacing(6))]
+
+mx-auto
+mr-4
+ml-3
+-mt-8
+p-6
+px-2 
+py-[calc(--spacing(4)-1px)]
+py-0.5 
+pt-0
+pb-0
+
+aspect-3/2
+aspect-video
+object-cover
+object-center
+
+inset-y-0 
+inset-px
+-inset-1
+top-[117px]
+-top-4 
+left-0
+-left-4
+start-0
+
+transition 
+transition-all 
+transition-discrete
+delay-150 
+duration-300 
+ease-in-out
+-skew-y-3
+translate-x-0.5
+-translate-6
+rotate-45
+scale-75
+transform-3d
+transform-none
+origin-right
+
+
+bg-violet-600 
+bg-red-500!
+bg-gray-900/50 
+bg-(--bg-color-hover) 
+bg-[#316ff6] 
+bg-gradient-to-r 
+from-pink-500 
+to-violet-500 
+bg-clip-text 
+
+text-base
+text-sm
+text-sm/6
+text-xl
+text-[22px] 
+text-black
+text-pink-600
+text-(--text-color)
+text-center 
+align-middle
+whitespace-pre
+break-all
+placeholder-gray-400
+font-medium
+font-semibold
+font-sans
+not-italic
+leading-tight
+tracking-widest
+tracking-wide
+tracking-tight
+uppercase
+underline
+no-underline
+line-clamp-3
+line-clamp-none
+truncate
+overflow-hidden
+overflow-auto 
+border
+border-pink-500 
+border-collapse
+border-separate
+rounded-none
+rounded-full
+rounded-md
+rounded-xl
+rounded-[calc(var(--radius-xl)-1px)]
+outline 
+outline-2 
+outline-sky-500 
+shadow-none 
+shadow-sm
+shadow-md
+drop-shadow-md
+ring 
+ring-gray-900/5
+stroke-pink-700
+fill-blue-500
+fill-(--my-brand-color)
+fill-[var(--my-brand-color)]
+stroke-current
+stroke-2
+blur-xs
+divide-y
+divide-gray-200
+space-y-4
+accent-pink-500
+caret-rose-500
+appearance-none
+scheme-dark
+cursor-grabbing
+select-text
+resize
+scroll-pl-6
+snap-x
+ snap-center
+
+https://tailwindcss.com/docs/hover-focus-and-other-states#quick-reference
+https://tailwindcss.com/docs/responsive-design#container-size-reference
+
+sm:
+md:
+lg:
+2xl:
+max-xl:
+min-[320px]
+max-[600px]:
+md:max-xl:
+@md:
+@max-md:
+@min-[475px]:
+hover:
+focus:
+not-focus:
+active:
+invalid:
+disabled:
+first:
+last:
+even:
+odd:
+nth-3:
+dark:
+file:
+marker:
+selection:
+portrait:
+landscape:
+first-letter:
+first-line: 
+ltr:
+rtl:
+*:
+**:
+
+*:px-2 
+dark:*:bg-sky-500/10
+
+has-checked:bg-indigo-50
+has-[:focus]
+has-[img]
+
+group
+  group-has-[a]:block 
+  group-hover:stroke-white
+  in-focus:opacity-100
+
+group is-published
+  group-[.is-published]:block
+
+group/item
+  group/edit invisible group-hover/item:visible
+    group-hover/edit:translate-x-0.5
+
+peer
+peer-has-checked:hidden
+not-peer-has-checked
+
+@container
+  @md:flex-row
+
+@container/main
+  @sm/main:flex-col
+
+@container
+  w-[50cqw]
+
+*:border *:border-sky-100 
+
+**:data-avatar:size-12 
+  data-avatar
+
+[&_p]:mt-4
+  p
+
+[&.is-dragging]:active:cursor-grabbing
+
+lg:[&:nth-child(-n+3)]:hover:underline
+
+grid-cols-[1fr_500px_2fr]
+grid-cols-[24rem_2.5rem_minmax(0,1fr)]
+
+divide-y
+.divide-y {
+  :where(& > :not(:last-child)) {
+    --tw-divide-y-reverse: 0;
+    border-bottom-style: var(--tw-border-style);
+    border-top-style: var(--tw-border-style);
+    border-top-width: calc(1px * var(--tw-divide-y-reverse));
+    border-bottom-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+  }
+}
+@property --tw-divide-y-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+
+
+https://tailwindcss.com/docs/dark-mode
+prefers-color-scheme
+
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+<html class="dark">
+
+document.documentElement.classList.toggle(
+  "dark",
+  localStorage.theme === "dark" ||
+    (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches),
+);
+localStorage.theme = "light";
+localStorage.theme = "dark";
+localStorage.removeItem("theme");
+
+
+https://tailwindcss.com/docs/theme#theme-variable-namespaces
+https://tailwindcss.com/docs/theme#default-theme-variable-reference
+theme variables
+
+@import "tailwindcss";
+@theme {
+  --*: initial;
+  --color-*: initial;
+  --color-primary: var(--color-red-500);
+  --color-secondary: var(--color-blue-500);
+  --color-mint-500: oklch(0.72 0.11 178);
+  --font-poppins: Poppins, sans-serif;
+  --breakpoint-3xl: 120rem;
+  --container-8xl: 96rem;
+  --spacing: 1px; 
+}
+bg-mint-500
+background-color: var(--color-mint-500)
+font-poppins
+3xl:grid-cols-6
+@container
+  @8xl:flex-row
+
+:root - without utility classes
+@theme static  - always generating all css variables
+
+@import "tailwindcss";
+@import "../brand/theme.css";
+
+@import "tailwindcss";
+:root {
+  --acme-canvas-color: oklch(0.967 0.003 264.542);
+}
+[data-theme="dark"] {
+  --acme-canvas-color: oklch(0.21 0.034 264.665);
+}
+@theme inline {
+  --color-canvas: var(--acme-canvas-color);
+}
+
+https://tailwindcss.com/docs/adding-custom-styles
+
+@import "tailwindcss";
+
+@layer base {
+  h1 {
+    font-size: var(--text-2xl);
+  }
+  h2 {
+    font-size: var(--text-xl);
+  }
+
+  .google-map * {
+    border-style: none;
+  }
+}
+
+@layer components {
+  .card {
+    background-color: var(--color-white);
+    border-radius: var(--rounded-lg);
+    padding: var(--spacing-6);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .my-element {
+    background: white;
+    @variant dark {
+      @variant hover {
+        background: black;
+      }
+    }
+  }
+
+  .btn-primary {
+    border-radius: calc(infinity * 1px);
+    background-color: var(--color-violet-500);
+    padding-inline: --spacing(5);
+    padding-block: --spacing(2);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-white);
+    box-shadow: var(--shadow-md);
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-violet-700);
+      }
+    }
+  }
+}
+
+@utility content-auto {
+  content-visibility: auto;
+}
+
+@utility scrollbar-hidden {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@theme {
+  --tab-size-2: 2;
+  --tab-size-4: 4;
+  --tab-size-github: 8;
+}
+@utility tab-* {
+  tab-size: --value(--tab-size-*);
+}
+tab-2, tab-4 and tab-github
+
+@utility text-* {
+  font-size: --value(--text-*, [length]);
+  line-height: --modifier(--leading-*, [length], [*]);
+}
+
+<style>
+  @reference "../../app.css";
+  h1 {
+    @apply text-2xl font-bold text-red-500;
+  }
+</style>
+
+style={{
+  "--bg-color": buttonColor,
+  "--bg-color-hover": buttonColorHover,
+  "--text-color": textColor,
+}}
+
+let styles = getComputedStyle(document.documentElement);
+let shadow = styles.getPropertyValue("--shadow-xl");
+
+text-(length:--my-var)
+text-(color:--my-var)
+
+[--gutter-width:1rem] lg:[--gutter-width:2rem]
+[mask-type:luminance] hover:[mask-type:alpha]
+[--scroll-offset:56px] lg:[--scroll-offset:44px]
+
+bg-[url('/what_a_rush.png')]
+after:content-['_↗']
+before="Hello World" before:content-[attr(before)]
+before:content-['Hello_World']
+before:content-['hello\_world']
+String.raw`before:content-['hello\_world']`
+
+https://examples.motion.dev/
+https://www.react-spring.dev/ 
+
+https://tailwindcss.com/docs/detecting-classes-in-source-files#explicitly-registering-sources
+@import "tailwindcss";
+@source "../node_modules/@acmecorp/ui-lib";
+
+@import "tailwindcss" source("../src");
+
+@import "tailwindcss" source(none);
+@source "../admin";
+@source "../shared";
+
+@import "tailwindcss" important;
+@import "tailwindcss" prefix(tw);
+
+https://tailwindcss.com/docs/functions-and-directives#directives
+@import
+@theme
+@source
+@utility
+@variant
+@custom-variant
+@apply
+@reference
+
+https://tailwindcss.com/docs/functions-and-directives#functions
+--alpha()
+--spacing()
+
+https://tailwindcss.com/docs/preflight
+https://github.com/sindresorhus/modern-normalize
+
+https://www.youtube.com/watch?v=-h9rH539x1k
+https://play.tailwindcss.com/P4CmmkDXaB
+
+https://www.youtube.com/watch?v=X3-4jwm4Z4Y
+https://play.tailwindcss.com/SIHJT7S215
