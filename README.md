@@ -42,8 +42,10 @@ https://idriuk.github.io/playground/ - github
 http://localhost:5173/playground/ - dev
 http://localhost:6006/?path=/docs/example-button--docs - storybook
 
-
-
+format with prettier
+```
+yarn prettier --write "src/**/*.{js,ts,jsx,tsx,json,md,css,scss,html}"
+```
 
 <p align="center">
   <a href="https://www.chromatic.com/">
