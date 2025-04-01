@@ -30,4 +30,5 @@ Repo settings / choose gh-pages
 npx storybook@latest init --builder vite
 
 // add package with yarn to dev with exact version
-yarn add --dev --exact prettier
+yarn add --dev --exact prettier prettier-plugin-tailwindcss
+yarn prettier --write "src/**/*.{js,ts,jsx,tsx,json,md,css,scss,html}"
