@@ -28,3 +28,6 @@ yarn deploy
 Repo settings / choose gh-pages
 
 npx storybook@latest init --builder vite
+
+// add package with yarn to dev with exact version
+yarn add --dev --exact prettier
