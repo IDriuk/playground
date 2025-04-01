@@ -159,6 +159,7 @@ stroke-2
 blur-xs
 divide-y
 divide-gray-200
+space-y-4
 accent-pink-500
 caret-rose-500
 appearance-none
