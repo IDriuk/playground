@@ -1,5 +1,6 @@
 block 
 inline
+inline-block
 hidden
 visible
 invisible
@@ -9,31 +10,35 @@ absolute
 z-10
 float-left
 columns-3
+
 grid 
+grid-flow-col
+grid-flow-row-dense 
+auto-cols-min
 grid-cols-3
-justify-items-start
-justify-self-center
-content-center
-place-content-center
 col-span-2
 col-start-3
 col-end-4
 col-span-full
-grid-flow-col
-auto-cols-min
-grid-flow-row-dense 
 grid-rows-4
-grid-rows-subgrid
 row-span-full
+grid-rows-subgrid
+gap-4
+gap-x-8
+content-center
+place-content-center
+justify-items-start
+justify-self-center
+
 flex 
 flex-wrap
 flex-nowrap
 flex-col 
 flex-row
 inline-flex 
-items-center 
-items-baseline
 justify-center
+items-baseline
+self-center
 flex-1
 flex-initial
 flex-auto
@@ -42,8 +47,7 @@ basis-64
 shrink-0
 grow
 order-first
-gap-4
-gap-x-8
+
 h-full
 h-10 
 h-dvh
@@ -57,16 +61,32 @@ max-w-md
 max-w-2xl
 max-w-9/10
 max-h-[calc(100dvh-(--spacing(6))]
+
+mx-auto
+mr-4
+ml-3
+-mt-8
+p-6
+px-2 
+py-[calc(--spacing(4)-1px)]
+py-0.5 
+pt-0
+pb-0
+
+aspect-3/2
+aspect-video
 object-cover
 object-center
+
 inset-y-0 
 inset-px
 -inset-1
 top-[117px]
-left-0
-start-0
 -top-4 
+left-0
 -left-4
+start-0
+
 transition 
 transition-all 
 transition-discrete
@@ -78,21 +98,11 @@ translate-x-0.5
 -translate-6
 rotate-45
 scale-75
+transform-3d
 transform-none
 origin-right
-transform-3d
-aspect-3/2
-aspect-video
-p-6
-px-2 
-py-[calc(--spacing(4)-1px)]
-py-0.5 
-pt-0
-pb-0
-mr-4
-ml-3
--mt-8
-mx-auto
+
+
 bg-violet-600 
 bg-red-500!
 bg-gray-900/50 
@@ -102,6 +112,7 @@ bg-gradient-to-r
 from-pink-500 
 to-violet-500 
 bg-clip-text 
+
 text-base
 text-sm
 text-sm/6
@@ -110,8 +121,7 @@ text-[22px]
 text-black
 text-pink-600
 text-(--text-color)
-text-center
-inline-block 
+text-center 
 align-middle
 whitespace-pre
 break-all
@@ -429,6 +439,9 @@ text-(color:--my-var)
 [--scroll-offset:56px] lg:[--scroll-offset:44px]
 
 bg-[url('/what_a_rush.png')]
+after:content-['_↗']
+before="Hello World" before:content-[attr(before)]
+before:content-['Hello_World']
 before:content-['hello\_world']
 String.raw`before:content-['hello\_world']`
 
@@ -464,11 +477,6 @@ https://tailwindcss.com/docs/functions-and-directives#functions
 
 https://tailwindcss.com/docs/preflight
 https://github.com/sindresorhus/modern-normalize
-
-after:content-['_↗']
-before="Hello World" before:content-[attr(before)]
-before:content-['Hello_World']
-
 
 https://www.youtube.com/watch?v=-h9rH539x1k
 https://play.tailwindcss.com/P4CmmkDXaB
