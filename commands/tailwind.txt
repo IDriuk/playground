@@ -483,3 +483,7 @@ https://play.tailwindcss.com/P4CmmkDXaB
 
 https://www.youtube.com/watch?v=X3-4jwm4Z4Y
 https://play.tailwindcss.com/SIHJT7S215
+
+Product card with SVG aligned with text.
+https://www.youtube.com/watch?v=5QTHG99OYS4
+https://play.tailwindcss.com/aUGlnWcFpY
