@@ -490,3 +490,7 @@ https://play.tailwindcss.com/aUGlnWcFpY
 
 https://headlessui.com/react/tabs (didn't work with tailwind 4)
 https://heroicons.com/
+
+https://www.youtube.com/watch?v=soFSSkf4oVY
+https://play.tailwindcss.com/CVB96FoJIp
+<span class="absolute top-1/2 left-1/2 size-12 -translate-1/2 [@media(pointer:fine)]:hidden"></span>
