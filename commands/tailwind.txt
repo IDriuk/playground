@@ -493,3 +493,9 @@ https://play.tailwindcss.com/aUGlnWcFpY
 https://www.youtube.com/watch?v=soFSSkf4oVY
 https://play.tailwindcss.com/CVB96FoJIp
 <span class="absolute top-1/2 left-1/2 size-12 -translate-1/2 [@media(pointer:fine)]:hidden"></span>
+
+https://www.youtube.com/watch?v=7d0qmca5kzc
+https://stackblitz.com/edit/vitejs-vite-my7i9wbd?file=src%2FDropdown.jsx
+grid grid-cols-[auto_1fr]
+col-span-2 grid grid-cols-subgrid
+mr-2 inline-flex size-4 shrink-0
