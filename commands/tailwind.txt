@@ -494,6 +494,12 @@ https://www.youtube.com/watch?v=soFSSkf4oVY
 https://play.tailwindcss.com/CVB96FoJIp
 <span class="absolute top-1/2 left-1/2 size-12 -translate-1/2 [@media(pointer:fine)]:hidden"></span>
 
+https://www.youtube.com/watch?v=v9nHYcKeBw0
+https://play.tailwindcss.com/ifJQO3X7tm
+-mx-(--page-padding) mt-8 flex overflow-x-auto
+  grow px-(--page-padding)
+        <table class="min-w-full text-left text-sm/6 whitespace-nowrap text-zinc-950">
+
 https://www.youtube.com/watch?v=7d0qmca5kzc
 https://stackblitz.com/edit/vitejs-vite-my7i9wbd?file=src%2FDropdown.jsx
 grid grid-cols-[auto_1fr]
