@@ -1,0 +1,241 @@
+https://learnxinyminutes.com/typescript/
+
+https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
+https://www.typescriptlang.org/play/
+
+let isDone: boolean = false;
+let notSure: any = 4;
+const numLivesForCat = 9;
+
+let list: number[] = [1, 2, 3];
+let list: Array<number> = [1, 2, 3];
+
+enum Color { Red, Green, Blue };
+let c: Color = Color.Green;
+console.log(Color[c]); // "Green"
+
+function bigHorribleAlert(): void {
+  alert("I'm a little annoying box!");
+}
+
+let f3 = (i: number): number => { return i * i; }
+let f4 = (i: number) => { return i * i; }
+let f5 = (i: number) => i * i;
+
+function f6(i: string | number): void {
+  console.log("The value was " + i);
+}
+
+interface Person {
+  name: string;
+  age?: number;
+  move(): void;
+}
+
+interface SearchFunc {
+  (source: string, subString: string): boolean;
+}
+
+class Point {
+  x: number;
+  constructor(x: number, public y: number = 0) {
+    this.x = x;
+  }
+  dist(): number { return Math.sqrt(this.x * this.x + this.y * this.y); }
+  static origin = new Point(0, 0);
+}
+
+class Point3D extends Point {
+  constructor(x: number, y: number, public z: number = 0) {
+    super(x, y); 
+  }
+  dist(): number {
+    let d = super.dist();
+    return Math.sqrt(d * d + this.z * this.z);
+  }
+}
+
+module Geometry {
+  export class Square {
+    constructor(public sideLength: number = 0) {
+    }
+    area() {
+      return Math.pow(this.sideLength, 2);
+    }
+  }
+}
+let s1 = new Geometry.Square(5);
+import G = Geometry;
+let s2 = new G.Square(10);
+
+class Tuple<T1, T2> {
+  constructor(public item1: T1, public item2: T2) {
+  }
+}
+interface Pair<T> {
+  item1: T;
+  item2: T;
+}
+let pairToTuple = function <T>(p: Pair<T>) {
+  return new Tuple(p.item1, p.item2);
+};
+let tuple = pairToTuple({ item1: "hello", item2: "world" });
+
+Including references to a definition file:
+/// <reference path="jquery.d.ts" />
+
+class Car {
+  readonly make: string;
+  readonly model: string;
+  readonly year = 2018;
+  constructor() {
+    this.make = "Unknown Make"; // Assignment permitted in constructor
+    this.model = "Unknown Model"; // Assignment permitted in constructor
+  }
+}
+
+let numbers: Array<number> = [0, 1, 2, 3, 4];
+let moreNumbers: ReadonlyArray<number> = numbers;
+
+// Tagged Union Types for modelling state that can be in one of many shapes
+type State =
+  | { type: "loading" }
+  | { type: "success", value: number }
+  | { type: "error", message: string };
+
+declare const state: State;
+
+type OrderSize = "regular" | "large";
+type OrderItem = "Espresso" | "Cappuccino";
+type Order = `A ${OrderSize} ${OrderItem}`;
+
+
+https://learntypescript.dev/03/l7-unknown
+
+function isPerson(person: any): person is Person {
+  return "id" in person && "name" in person;
+}
+async function getPerson(id: string): Promise<Person | null> {
+  const person = await getData("/people/1");
+  if (person && isPerson(person)) {
+    return person;
+  }
+  return null;
+}
+
+enum TypeName {
+    value1,
+    value2,
+}
+
+interface InterfaceA extends InterfaceB {}
+
+It is legal in TypeScript for multiple interfaces with the same name to be created. 
+TypeScript will merge interfaces with the same name in a process called declaration merging.
+
+type A_or_B_or_C = A | B | C;
+
+// contain all properties from all types
+// The type of a common member of an intersection type is mathematically intersected.
+type A_and_B_and_C = A & B & C;
+type A = {
+  doIt: (a: string) => void;
+};
+type B = {
+  doIt: (a: string, b: string) => void;
+};
+type A_and_B = A & B;
+const ab_v1: A_and_B = {
+  doIt: (a: string) => {},
+};
+
+type Names = string[];
+interface Names {
+  [index: number]: string;
+}
+
+type Person = {
+  name: string;
+  score: number;
+};
+interface Person {
+  name: string;
+  score: number;
+}
+
+type Name = {
+  firstName: string;
+  lastName: string;
+};
+type PhoneNumber = {
+  landline: string;
+  mobile: string;
+};
+type Contact = Name & PhoneNumber;
+interface Name {
+  firstName: string;
+  lastName: string;
+}
+interface PhoneNumber {
+  landline: string;
+  mobile: string;
+}
+interface Contact extends Name, PhoneNumber {}
+
+type StringActions = { type: "loading" } | { type: "loaded"; data: string[] };
+type NumberActions = { type: "loading" } | { type: "loaded"; data: number[] };
+type Actions = StringActions & NumberActions;
+
+function logStatus(status: string | null) {
+  // We can say TypeScript has narrowed the type of status on line 3.
+  if (status) {
+    console.log(status);
+  }
+}
+
+interface Form<T> {
+  errors: {
+    [K in keyof T]?: string;
+  };
+  values: T;
+}
+
+interface Component<T1 = string, T2 = any> {
+  ...
+}
+
+function getFieldValue<T, K extends keyof T>(
+  ...
+  fieldName: K
+) {
+  ...
+}
+
+function logThings<T extends unknown[]>(name: string, ...things: T) {
+  console.log(things);
+}
+
+(string | number)[]
+
+
+const button = document.querySelector(".go") as HTMLButtonElement;
+
+return text!.concat(text!);
+
+function sayHello(contact: Contact) {
+  if (contact instanceof Person) {
+    console.log("Hello " + contact.firstName);
+  }
+}
+
+function isPerson(contact: Contact): contact is Person {
+  return (contact as Person).firstName !== undefined;
+}
+
+let keys: keyof ExistingType;
+
+type ContactDetails = { [K in "name" | "email"]: string };
+
+function (param: typeof existingObject) { ... }
+
+let billScores = Object.freeze([90, 65, 80]);
