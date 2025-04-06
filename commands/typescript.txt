@@ -133,6 +133,19 @@ interface InterfaceA extends InterfaceB {}
 It is legal in TypeScript for multiple interfaces with the same name to be created. 
 TypeScript will merge interfaces with the same name in a process called declaration merging.
 
+// This line is a shortcut to tell TypeScript there is a
+// constant called `backpack`, and to not worry about where it came from.
+declare const backpack: Backpack<string>;
+
+// In a .d.ts file or .ts file that is not a module:
+declare module "SomeModule" {
+  export function fn(): string;
+}
+
+myOtherModule.ts
+/// <reference path="myModules.d.ts" />
+import * as m from "SomeModule";
+
 type A_or_B_or_C = A | B | C;
 
 // contain all properties from all types
