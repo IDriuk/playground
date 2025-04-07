@@ -252,3 +252,288 @@ type ContactDetails = { [K in "name" | "email"]: string };
 function (param: typeof existingObject) { ... }
 
 let billScores = Object.freeze([90, 65, 80]);
+
+printName(obj: { first: string; last?: string })
+printId(id: number | string)
+
+function printId(id: number | string) {
+  if (typeof id === "string") {
+    console.log(id.toUpperCase());
+  } else {
+    console.log(id);
+  }
+}
+
+type ID = number | string;
+type Point = {
+  x: number;
+  y: number;
+};
+
+interface Point {
+  x: number;
+  y: number;
+}
+ 
+
+interface Animal {
+  name: string;
+}
+interface Bear extends Animal {
+  honey: boolean;
+}
+
+type Animal = {
+  name: string;
+}
+type Bear = Animal & { 
+  honey: boolean;
+}
+
+const myCanvas = document.getElementById("main_canvas") as HTMLCanvasElement;
+const myCanvas = <HTMLCanvasElement>document.getElementById("main_canvas");
+
+const a = expr as any as T;
+
+alignment: "left" | "right" | "center"
+
+declare function handleRequest(url: string, method: "GET" | "POST"): void;
+const req = { url: "https://example.com", method: "GET" } as const;
+const req = { url: "https://example.com", method: "GET" as "GET" }
+const req = { url: "https://example.com", method: "GET" } as const;
+
+strictNullChecks
+function doSomething(x: string | null) {
+  if (x === null) {
+  } else {
+  }
+}
+
+function liveDangerously(x?: number | null) {
+  console.log(x!.toFixed());
+}
+
+function padLeft(padding: number | string, input: string): string {
+  if (typeof padding === "number") {
+    return " ".repeat(padding) + input;
+  }
+  return padding + input;
+}
+
+typeof
+ type guards
+
+"string"
+"number"
+"bigint"
+"boolean"
+"symbol"
+"undefined"
+"object"
+"function"
+
+if ("swim" in animal) {}
+
+function logValue(x: Date | string) {
+  if (x instanceof Date) {
+    console.log(x.toUTCString());
+  }
+}
+
+function isFish(pet: Fish | Bird): pet is Fish {
+  return (pet as Fish).swim !== undefined;
+}
+if (isFish(pet)) {
+  pet.swim();
+} else {
+  pet.fly();
+}
+
+const zoo: (Fish | Bird)[]
+
+const zoo: (Fish | Bird)[] = [getSmallPet(), getSmallPet(), getSmallPet()];
+const underWater1: Fish[] = zoo.filter(isFish);
+// or, equivalently
+const underWater2: Fish[] = zoo.filter(isFish) as Fish[];
+ 
+// The predicate may need repeating for more complex examples
+const underWater3: Fish[] = zoo.filter((pet): pet is Fish => {
+  if (pet.name === "sharkey") return false;
+  return isFish(pet);
+});
+
+interface Circle {
+  kind: "circle";
+  radius: number;
+}
+interface Square {
+  kind: "square";
+  sideLength: number;
+}
+type Shape = Circle | Square;
+if (shape.kind === "circle") { return Math.PI * shape.radius ** 2; }
+
+const _exhaustiveCheck: never = shape;
+
+https://www.typescriptlang.org/docs/handbook/2/functions.html
+
+type DescribableFunction = {
+  description: string;
+  (someArg: number): boolean;
+};
+
+type SomeConstructor = {
+  new (s: string): SomeObject;
+};
+
+interface CallOrConstruct {
+  (n?: number): string;
+  new (s: string): Date;
+}
+
+function firstElement<Type>(arr: Type[]): Type | undefined {
+  return arr[0];
+}
+
+function map<Input, Output>(arr: Input[], func: (arg: Input) => Output): Output[] {
+  return arr.map(func);
+}
+
+function longest<Type extends { length: number }>(a: Type, b: Type) {
+  if (a.length >= b.length) {
+    return a;
+  } else {
+    return b;
+  }
+}
+
+interface DB {
+  filterUsers(filter: (this: User) => boolean): User[];
+}
+const db = getDB();
+const admins = db.filterUsers(function (this: User) {
+  return this.admin;
+});
+
+
+function multiply(n: number, ...m: number[]) {
+  return m.map((x) => n * x);
+}
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+arr1.push(...arr2);
+
+function sum({ a, b, c }: { a: number; b: number; c: number }) {
+  console.log(a + b + c);
+}
+
+function f2(): void {
+  // @ts-expect-error
+  return true;
+}
+
+interface PaintOptions {
+  shape: Shape;
+  xPos?: number;
+  yPos?: number;
+}
+
+interface Home {
+  readonly resident: { name: string; age: number };
+}
+
+interface StringArray {
+  [index: number]: string;
+}
+
+interface SquareConfig {
+  color?: string;
+  width?: number;
+  [propName: string]: unknown;
+}
+
+interface Colorful {
+  color: string;
+}
+interface Circle {
+  radius: number;
+}
+interface ColorfulCircle extends Colorful, Circle {}
+
+type OrNull<Type> = Type | null;
+type OneOrMany<Type> = Type | Type[];
+type OneOrManyOrNull<Type> = OrNull<OneOrMany<Type>>;   
+type OneOrManyOrNull<Type> = OneOrMany<Type> | null
+type OneOrManyOrNullStrings = OneOrManyOrNull<string>;
+
+function doSomething(stringHash: [string, number]) {
+  const [inputString, hash] = stringHash;}
+
+type Either2dOr3d = [number, number, number?];
+type StringNumberBooleans = [string, number, ...boolean[]];
+
+https://www.typescriptlang.org/docs/handbook/2/types-from-types.html
+
+function identity<Type>(arg: Type): Type {
+  return arg;
+}
+let myIdentity: <Input>(arg: Input) => Input = identity;
+
+function getProperty<Type, Key extends keyof Type>(obj: Type, key: Key) {
+  return obj[key];
+}
+let x = { a: 1, b: 2, c: 3, d: 4 };
+getProperty(x, "a");
+
+function createInstance<A extends Animal>(c: new () => A): A {
+  return new c();
+}
+
+type Predicate = (x: unknown) => boolean;
+type K = ReturnType<Predicate>;
+
+function f() {
+  return { x: 10, y: 3 };
+}
+type P = ReturnType<typeof f>;
+
+type Person = { age: number; name: string; alive: boolean };
+type Age = Person["age"];
+type I1 = Person["age" | "name"];
+type I1 = string | number
+type I2 = Person[keyof Person];
+type I2 = string | number | boolean
+type AliveOrName = "alive" | "name";
+type I3 = Person[AliveOrName];
+
+type OptionsFlags<Type> = {
+  [Property in keyof Type]: boolean;
+};
+type Features = {
+  darkMode: () => void;
+  newUserProfile: () => void;
+};
+type FeatureOptions = OptionsFlags<Features>;
+
+type CreateMutable<Type> = {
+  -readonly [Property in keyof Type]: Type[Property];
+};
+type LockedAccount = {
+  readonly id: string;
+  readonly name: string;
+};
+type UnlockedAccount = CreateMutable<LockedAccount>;
+
+type Concrete<Type> = {
+  [Property in keyof Type]-?: Type[Property];
+};
+type MaybeUser = {
+  id: string;
+  name?: string;
+  age?: number;
+};
+type User = Concrete<MaybeUser>;
+
+type EmailLocaleIDs = "welcome_email" | "email_heading";
+type FooterLocaleIDs = "footer_title" | "footer_sendoff";
+type AllLocaleIDs = `${EmailLocaleIDs | FooterLocaleIDs}_id`;
