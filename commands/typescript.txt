@@ -537,3 +537,77 @@ type User = Concrete<MaybeUser>;
 type EmailLocaleIDs = "welcome_email" | "email_heading";
 type FooterLocaleIDs = "footer_title" | "footer_sendoff";
 type AllLocaleIDs = `${EmailLocaleIDs | FooterLocaleIDs}_id`;
+
+"use strict";
+class C {
+    constructor() {
+        this._length = 0;
+    }
+    get length() {
+        return this._length;
+    }
+    set length(value) {
+        this._length = value;
+    }
+}
+.d.ts
+declare class C {
+    _length: number;
+    get length(): number;
+    set length(value: number);
+}
+
+interface Pingable {
+  ping(): void;
+}
+class Sonar implements Pingable {
+  ping() {
+    console.log("ping!");
+  }
+}
+
+class Base {
+  greet() {
+    console.log("Hello, world!");
+  }
+}
+class Derived extends Base {
+  greet(name?: string) {
+    if (name === undefined) {
+      super.greet();
+    } else {
+      console.log(`Hello, ${name.toUpperCase()}`);
+    }
+  }
+}
+
+class Foo {
+    static #count = 0;
+    get count() {
+        return Foo.#count;
+    }
+    static {
+        try {
+            const lastInstances = loadLastInstances();
+            Foo.#count += lastInstances.length;
+        }
+        catch {}
+    }
+}
+
+// TypeScript input with 'this' parameter
+function fn(this: SomeType, x: number) { }
+
+isFile(): this is FileRep {
+  return this instanceof FileRep;
+}
+
+class Params {
+  constructor(
+    public readonly x: number,
+    protected y: number,
+    private z: number
+  ) {
+    // No body necessary
+  }
+}
