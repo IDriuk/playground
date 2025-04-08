@@ -1,27 +1,60 @@
 https://learnxinyminutes.com/typescript/
-
+https://learntypescript.dev/03/l7-unknown
 https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
+https://www.typescriptlang.org/docs/handbook/2/functions.html
+https://www.typescriptlang.org/docs/handbook/2/types-from-types.html
 https://www.typescriptlang.org/play/
 
-let isDone: boolean = false;
-let notSure: any = 4;
-const numLivesForCat = 9;
+type State =
+  | { type: "loading" }
+  | { type: "success", value: number }
+  | { type: "error", message: string };
 
-let list: number[] = [1, 2, 3];
-let list: Array<number> = [1, 2, 3];
+type OrderSize = "regular" | "large";
+type OrderItem = "Espresso" | "Cappuccino";
+type Order = `A ${OrderSize} ${OrderItem}`;
+
+type EmailLocaleIDs = "welcome_email" | "email_heading";
+type FooterLocaleIDs = "footer_title" | "footer_sendoff";
+type AllLocaleIDs = `${EmailLocaleIDs | FooterLocaleIDs}_id`;
 
 enum Color { Red, Green, Blue };
 let c: Color = Color.Green;
 console.log(Color[c]); // "Green"
 
-function bigHorribleAlert(): void {
-  alert("I'm a little annoying box!");
+let list: number[] = [1, 2, 3];
+let list: Array<number> = [1, 2, 3];
+let moreNumbers: ReadonlyArray<number> = numbers;
+
+type ID = number | string;
+type Ar = (string | number)[]
+type Point = {
+  x: number;
+  y: number;
+};
+
+interface Point {
+  x: number;
+  y: number;
 }
 
-let f3 = (i: number): number => { return i * i; }
-let f4 = (i: number) => { return i * i; }
-let f5 = (i: number) => i * i;
+interface Animal {
+  name: string;
+}
+interface Bear extends Animal {
+  honey: boolean;
+}
 
+type Animal = {
+  name: string;
+}
+type Bear = Animal & { 
+  honey: boolean;
+}
+
+interface SearchFunc {
+  (source: string, subString: string): boolean;
+}
 function f6(i: string | number): void {
   console.log("The value was " + i);
 }
@@ -31,9 +64,15 @@ interface Person {
   age?: number;
   move(): void;
 }
-
-interface SearchFunc {
-  (source: string, subString: string): boolean;
+function isPerson(person: any): person is Person {
+  return "id" in person && "name" in person;
+}
+async function getPerson(id: string): Promise<Person | null> {
+  const person = await getData("/people/1");
+  if (person && isPerson(person)) {
+    return person;
+  }
+  return null;
 }
 
 class Point {
@@ -55,19 +94,6 @@ class Point3D extends Point {
   }
 }
 
-module Geometry {
-  export class Square {
-    constructor(public sideLength: number = 0) {
-    }
-    area() {
-      return Math.pow(this.sideLength, 2);
-    }
-  }
-}
-let s1 = new Geometry.Square(5);
-import G = Geometry;
-let s2 = new G.Square(10);
-
 class Tuple<T1, T2> {
   constructor(public item1: T1, public item2: T2) {
   }
@@ -81,9 +107,6 @@ let pairToTuple = function <T>(p: Pair<T>) {
 };
 let tuple = pairToTuple({ item1: "hello", item2: "world" });
 
-Including references to a definition file:
-/// <reference path="jquery.d.ts" />
-
 class Car {
   readonly make: string;
   readonly model: string;
@@ -93,58 +116,6 @@ class Car {
     this.model = "Unknown Model"; // Assignment permitted in constructor
   }
 }
-
-let numbers: Array<number> = [0, 1, 2, 3, 4];
-let moreNumbers: ReadonlyArray<number> = numbers;
-
-// Tagged Union Types for modelling state that can be in one of many shapes
-type State =
-  | { type: "loading" }
-  | { type: "success", value: number }
-  | { type: "error", message: string };
-
-declare const state: State;
-
-type OrderSize = "regular" | "large";
-type OrderItem = "Espresso" | "Cappuccino";
-type Order = `A ${OrderSize} ${OrderItem}`;
-
-
-https://learntypescript.dev/03/l7-unknown
-
-function isPerson(person: any): person is Person {
-  return "id" in person && "name" in person;
-}
-async function getPerson(id: string): Promise<Person | null> {
-  const person = await getData("/people/1");
-  if (person && isPerson(person)) {
-    return person;
-  }
-  return null;
-}
-
-enum TypeName {
-    value1,
-    value2,
-}
-
-interface InterfaceA extends InterfaceB {}
-
-It is legal in TypeScript for multiple interfaces with the same name to be created. 
-TypeScript will merge interfaces with the same name in a process called declaration merging.
-
-// This line is a shortcut to tell TypeScript there is a
-// constant called `backpack`, and to not worry about where it came from.
-declare const backpack: Backpack<string>;
-
-// In a .d.ts file or .ts file that is not a module:
-declare module "SomeModule" {
-  export function fn(): string;
-}
-
-myOtherModule.ts
-/// <reference path="myModules.d.ts" />
-import * as m from "SomeModule";
 
 type A_or_B_or_C = A | B | C;
 
@@ -213,23 +184,14 @@ interface Form<T> {
   values: T;
 }
 
-interface Component<T1 = string, T2 = any> {
-  ...
-}
+interface Component<T1 = string, T2 = any> { }
 
 function getFieldValue<T, K extends keyof T>(
   ...
   fieldName: K
-) {
-  ...
-}
+) { }
 
-function logThings<T extends unknown[]>(name: string, ...things: T) {
-  console.log(things);
-}
-
-(string | number)[]
-
+function logThings<T extends unknown[]>(name: string, ...things: T) { }
 
 const button = document.querySelector(".go") as HTMLButtonElement;
 
@@ -264,32 +226,6 @@ function printId(id: number | string) {
   }
 }
 
-type ID = number | string;
-type Point = {
-  x: number;
-  y: number;
-};
-
-interface Point {
-  x: number;
-  y: number;
-}
- 
-
-interface Animal {
-  name: string;
-}
-interface Bear extends Animal {
-  honey: boolean;
-}
-
-type Animal = {
-  name: string;
-}
-type Bear = Animal & { 
-  honey: boolean;
-}
-
 const myCanvas = document.getElementById("main_canvas") as HTMLCanvasElement;
 const myCanvas = <HTMLCanvasElement>document.getElementById("main_canvas");
 
@@ -300,7 +236,6 @@ alignment: "left" | "right" | "center"
 declare function handleRequest(url: string, method: "GET" | "POST"): void;
 const req = { url: "https://example.com", method: "GET" } as const;
 const req = { url: "https://example.com", method: "GET" as "GET" }
-const req = { url: "https://example.com", method: "GET" } as const;
 
 strictNullChecks
 function doSomething(x: string | null) {
@@ -374,8 +309,6 @@ type Shape = Circle | Square;
 if (shape.kind === "circle") { return Math.PI * shape.radius ** 2; }
 
 const _exhaustiveCheck: never = shape;
-
-https://www.typescriptlang.org/docs/handbook/2/functions.html
 
 type DescribableFunction = {
   description: string;
@@ -472,8 +405,6 @@ function doSomething(stringHash: [string, number]) {
 type Either2dOr3d = [number, number, number?];
 type StringNumberBooleans = [string, number, ...boolean[]];
 
-https://www.typescriptlang.org/docs/handbook/2/types-from-types.html
-
 function identity<Type>(arg: Type): Type {
   return arg;
 }
@@ -534,10 +465,6 @@ type MaybeUser = {
 };
 type User = Concrete<MaybeUser>;
 
-type EmailLocaleIDs = "welcome_email" | "email_heading";
-type FooterLocaleIDs = "footer_title" | "footer_sendoff";
-type AllLocaleIDs = `${EmailLocaleIDs | FooterLocaleIDs}_id`;
-
 "use strict";
 class C {
     constructor() {
@@ -549,12 +476,6 @@ class C {
     set length(value) {
         this._length = value;
     }
-}
-.d.ts
-declare class C {
-    _length: number;
-    get length(): number;
-    set length(value: number);
 }
 
 interface Pingable {
@@ -586,16 +507,8 @@ class Foo {
     get count() {
         return Foo.#count;
     }
-    static {
-        try {
-            const lastInstances = loadLastInstances();
-            Foo.#count += lastInstances.length;
-        }
-        catch {}
-    }
 }
 
-// TypeScript input with 'this' parameter
 function fn(this: SomeType, x: number) { }
 
 isFile(): this is FileRep {
@@ -611,3 +524,37 @@ class Params {
     // No body necessary
   }
 }
+
+.d.ts
+declare class C {
+    _length: number;
+    get length(): number;
+    set length(value: number);
+}
+
+/// <reference path="jquery.d.ts" />
+declare const backpack: Backpack<string>;
+
+// In a .d.ts file or .ts file that is not a module:
+declare module "SomeModule" {
+  export function fn(): string;
+}
+
+/// <reference path="myModules.d.ts" />
+import * as m from "SomeModule";
+
+module Geometry {
+  export class Square {
+    constructor(public sideLength: number = 0) {
+    }
+    area() {
+      return Math.pow(this.sideLength, 2);
+    }
+  }
+}
+let s1 = new Geometry.Square(5);
+import G = Geometry;
+let s2 = new G.Square(10);
+
+It is legal in TypeScript for multiple interfaces with the same name to be created. 
+TypeScript will merge interfaces with the same name in a process called declaration merging.
