@@ -1,6 +1,6 @@
 
 # Playground
-Project for experimenting with different technologies and testing tasks.
+Algorithms branch.
 
 ## References
 - [Docs](https://github.com/IDriuk/playground/tree/docs)
@@ -12,3 +12,4 @@ Project for experimenting with different technologies and testing tasks.
 - [Express.js with docker compose](https://github.com/IDriuk/playground/tree/express_dev)
 - [React router app with Docker for development](https://github.com/IDriuk/playground/tree/react_router_dev)
 - [Tailwind](https://github.com/IDriuk/playground/tree/tailwind)
+- [Algo](https://github.com/IDriuk/playground/tree/algo)
