@@ -1,0 +1,62 @@
+352. Data Stream as Disjoint Intervals. (c++ or java solution)
+Given a data stream input of non-negative integers a1, a2, ...,
+summarize the numbers seen so far as a list of disjoint intervals.
+For example, suppose the integers from the data stream are 1, 3, 7, 2, 6 ...,
+then the summary will be:
+[1,3], [6,7]
+
+class SummaryRanges {
+
+  private final TreeMap<Integer, Interval> startToIntervals;
+
+  /**
+   * Initialize your data structure here.
+   */
+  public SummaryRanges() {
+    startToIntervals = new TreeMap<>();
+  }
+
+  /**
+   * TreeMap. O(logn) Time.
+   * Tree map already has the ability to search lower/higher keys.
+   * Save a start to interval mapping in a tree map.
+   * When adding number, check if the tree map contains the value already.
+   * If yes, return.
+   * If no, get lower key, low, and higher key, high.
+   * If low and high both exist and low''s interval''s end + 1 = val and high - 1 = val:
+   * | The val merges two intervals. Setting low interval''s end to high interval''s end and remove high interval.
+   * If low exists and low interval''s end + 1 = val:
+   * | val can expand the ending of the low interval. Increment low interval''s end by 1.
+   * If low exists and low interval''s end + 1 > val:
+   * | val is within the low interval. No change needed.
+   * If high exists and high - 1 = val:
+   * | val can expand the starting of the high interval. Decrement high interval''s start by 1.
+   * | Note that the map''s key, which is start, should also update. So put a new entry and remove the old one.
+   * If both don''t exist:
+   * | Put a new entry to map.
+   */
+  public void addNum(int val) {
+    if (startToIntervals.containsKey(val)) return;
+    Integer low = startToIntervals.lowerKey(val);
+    Integer high = startToIntervals.higherKey(val);
+    if (low != null && high != null && startToIntervals.get(low).end + 1 == val && high - 1 == val) {
+      // Merge
+      startToIntervals.get(low).end = startToIntervals.get(high).end;
+      startToIntervals.remove(high);
+    } else if (low != null && startToIntervals.get(low).end + 1 >= val) {
+      startToIntervals.get(low).end = Math.max(startToIntervals.get(low).end, val);
+    } else if (high != null && high - 1 == val) {
+      startToIntervals.put(val, new Interval(val, startToIntervals.get(high).end));
+      startToIntervals.remove(high);
+    } else {
+      startToIntervals.put(val, new Interval(val, val));
+    }
+  }
+
+  /**
+   * Get intervals list directly from the map''s value collection. O(1) Time.
+   */
+  public List<Interval> getIntervals() {
+    return new ArrayList<>(startToIntervals.values());
+  }
+}

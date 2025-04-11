@@ -1,0 +1,40 @@
+307. Range Sum Query - Mutable (c++ or java solution)
+Given an integer array nums, find the sum of the elements between indices i and j(i <= j), inclusive.
+The update (i, val) function modifies nums by updating the element  at index i to val
+
+private int[] b;
+private int len;
+private int[] nums;
+
+public NumArray(int[] nums) {
+    this.nums = nums;
+    double l = Math.sqrt(nums.length);
+    len = (int) Math.ceil(nums.length/l);
+    b = new int [len];
+    for (int i = 0; i &lt; nums.length; i++)
+        b[i / len] += nums[i];
+}
+
+public int sumRange(int i, int j) {
+    int sum = 0;
+    int startBlock = i / len;
+    int endBlock = j / len;
+    if (startBlock == endBlock) {
+        for (int k = i; k &lt;= j; k++)
+            sum += nums[k];
+    } else {
+        for (int k = i; k &lt;= (startBlock + 1) * len - 1; k++)
+            sum += nums[k];
+        for (int k = startBlock + 1; k &lt;= endBlock - 1; k++)
+            sum += b[k];
+        for (int k = endBlock * len; k &lt;= j; k++)
+            sum += nums[k];
+    }
+    return sum;
+}
+
+public void update(int i, int val) {
+    int b_l = i / len;
+    b[b_l] = b[b_l] - nums[i] + val;
+    nums[i] = val;
+}
