@@ -1,8 +1,8 @@
 // A Chain adding function
 // https://www.codewars.com/kata/539a0e4d85e3425cb0000a88/train/javascript
 
-function add(n){
-  var fn = function(x) {
+function add(n:number){
+  var fn = function(x:number) {
     return add(n + x);
   };
   
@@ -20,3 +20,7 @@ var add = function(n) {
   return f;
 }
 */
+
+test("should handle increment", () => {
+  expect(add(1)(2)(3) as unknown as number + 3).toBe(9)
+})
