@@ -1,5 +1,12 @@
--------- closure -------
-A Chain adding function
+---------- closure ----------
+a_chain_adding_function
 
--------- reduce --------
-Array.diff
+---------- reduce ----------
+array_dif
+best_travel
+
+---------- recursion ----------
+best_travel
+
+---------- combinations ----------
+best_travel
