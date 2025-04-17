@@ -5,6 +5,7 @@ calculating_with_functions
 ---------- reduce ----------
 array_dif
 best_travel
+checkExam
 
 ---------- recursion ----------
 best_travel
