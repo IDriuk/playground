@@ -1,5 +1,6 @@
 ---------- closure ----------
 a_chain_adding_function
+calculating_with_functions
 
 ---------- reduce ----------
 array_dif
