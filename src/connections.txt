@@ -15,3 +15,7 @@ best_travel
 
 ---------- bits ----------
 bit_counting
+
+---------- interesting ----------
+a_chain_adding_function
+directions_reduction

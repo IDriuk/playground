@@ -7,6 +7,7 @@
 // represented as an empty string (in C the space character is used).
 // If the score < 0, return 0.
 // https://www.codewars.com/kata/5a3dd29055519e23ec000074/train/javascript
+// connect: undefined
 
 function checkExam(ar1: string[], ar2: string[]) {
   let result = ar2.reduce((ac, val, i) => {

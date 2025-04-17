@@ -1,12 +1,13 @@
 // Directions Reduction
 // https://www.codewars.com/kata/550f22f4d758534c1100025a/train/javascript
+// connect: interesting
 
-function dirReduc(arr){
-  let pairs = {NORTH: 'SOUTH', SOUTH: 'NORTH', EAST: 'WEST', WEST: 'EAST'}
+function dirReduc(arr: string[]){
+  let pairs: Record<string, string> = {NORTH: 'SOUTH', SOUTH: 'NORTH', EAST: 'WEST', WEST: 'EAST'}
   
   dr(arr)
   
-  function dr (arr) {
+  function dr (arr: string[]) {
     for ( let i = 0; i < arr.length; i++) {
       if ( pairs[arr[i]] == arr[i + 1] ) {
         arr.splice(i, 2)
@@ -40,3 +41,9 @@ function dirReduc(arr) {
   return str.match(/(NORTH|SOUTH|EAST|WEST)/g)||[];
 } 
 */
+
+test("reduce opposite directions", () => {
+  expect(dirReduc(["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"])).toEqual(["WEST"])
+  expect(dirReduc(["NORTH", "WEST", "SOUTH", "EAST"])).toEqual(["NORTH", "WEST", "SOUTH", "EAST"])
+  expect(dirReduc(["NORTH", "SOUTH", "EAST", "WEST", "EAST", "WEST"])).toEqual([])
+})
