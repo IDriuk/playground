@@ -15,6 +15,7 @@ best_travel
 
 ---------- bits ----------
 bit_counting
+find_the_odd_int
 
 ---------- interesting ----------
 a_chain_adding_function
