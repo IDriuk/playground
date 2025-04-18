@@ -21,3 +21,5 @@ find_the_odd_int
 a_chain_adding_function
 directions_reduction
 equal_sides_of_an_array
+
+---------- rechecked ----------
