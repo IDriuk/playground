@@ -17,9 +17,20 @@ best_travel
 bit_counting
 find_the_odd_int
 
+---------- declare ----------
+jaden_casing_strings
+
+---------- prototype ----------
+jaden_casing_strings
+
+---------- subarray ----------
+maximum_subarray_sum
+
 ---------- interesting ----------
 a_chain_adding_function
 directions_reduction
 equal_sides_of_an_array
+human_readable_time
+maximum_subarray_sum
 
 ---------- rechecked ----------
