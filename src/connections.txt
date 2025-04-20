@@ -26,11 +26,13 @@ jaden_casing_strings
 ---------- subarray ----------
 maximum_subarray_sum
 
+---------- factorial ----------
+number_of_trailing_zeros_of_n!
+
 ---------- interesting ----------
 a_chain_adding_function
 directions_reduction
 equal_sides_of_an_array
 human_readable_time
 maximum_subarray_sum
-
----------- rechecked ----------
+number_of_trailing_zeros_of_n!
