@@ -6,6 +6,7 @@ calculating_with_functions
 array_dif
 best_travel
 checkExam
+persistent_bugger
 
 ---------- recursion ----------
 best_travel
@@ -32,7 +33,8 @@ number_of_trailing_zeros_of_n!
 ---------- interesting ----------
 a_chain_adding_function
 directions_reduction
-equal_sides_of_an_array
+> equal_sides_of_an_array
 human_readable_time
 maximum_subarray_sum
 number_of_trailing_zeros_of_n!
+product_of_consecutive_fib_numbers
