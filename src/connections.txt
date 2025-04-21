@@ -30,6 +30,9 @@ maximum_subarray_sum
 ---------- factorial ----------
 number_of_trailing_zeros_of_n!
 
+---------- regex ----------
+replace_with_alphabet_position
+
 ---------- interesting ----------
 a_chain_adding_function
 directions_reduction
