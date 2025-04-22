@@ -36,8 +36,8 @@ replace_with_alphabet_position
 ---------- interesting ----------
 a_chain_adding_function
 directions_reduction
-> equal_sides_of_an_array
-human_readable_time
+equal_sides_of_an_array
+> human_readable_time
 maximum_subarray_sum
 number_of_trailing_zeros_of_n!
 product_of_consecutive_fib_numbers
