@@ -99,7 +99,7 @@ import {
   RandomIndex,
   findNthDigit,
   /* 399_evaluate_division (c++ or java solution) */
-} from "../../../algorithms";
+} from "../algorithms";
 
 describe("Algorithm tests form 301 to 400", () => {
   // 301. Remove Invalid Parentheses

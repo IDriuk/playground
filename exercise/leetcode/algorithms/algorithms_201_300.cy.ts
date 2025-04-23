@@ -99,7 +99,7 @@ import {
   longestConsecutive,
   bullsAndCows,
   longestIncreasingSubsequence,
-} from "../../../algorithms";
+} from "../algorithms";
 
 describe("Algorithm tests form 201 to 300", () => {
   // 201. Bitwise AND of Numbers Range

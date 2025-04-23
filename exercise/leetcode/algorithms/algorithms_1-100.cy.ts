@@ -99,7 +99,7 @@ import {
   isValidBST,
   recoverBST,
   isSameTree,
-} from "../../../algorithms";
+} from "../algorithms";
 
 describe("Algorithm tests from 1 to 100", () => {
   // 1. Two Sum

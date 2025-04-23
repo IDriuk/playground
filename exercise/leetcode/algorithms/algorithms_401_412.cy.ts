@@ -10,7 +10,7 @@ import {
   sumOfLeftLeaves,
   trapRainWater2,
   validWordAbbreviation,
-} from "../../../algorithms";
+} from "../algorithms";
 
 describe("Algorithm tests form 301 to 400", () => {
   // 401. Binary Watch

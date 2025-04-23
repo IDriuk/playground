@@ -86,7 +86,7 @@ import {
   rob,
   rightSideView,
   numberOfIslands,
-} from "../../../algorithms";
+} from "../algorithms";
 
 describe("Algorithm tests from 101 to 200", () => {
   // 101. Symmetric Tree
