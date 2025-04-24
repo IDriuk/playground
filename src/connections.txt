@@ -38,6 +38,7 @@ string_incrementer
 
 ---------- set ----------
 sum_of_pairs
+two_to_one
 
 ---------- interesting ----------
 a_chain_adding_function
