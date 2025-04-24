@@ -35,6 +35,7 @@ number_of_trailing_zeros_of_n!
 replace_with_alphabet_position
 simple_pig_latin
 string_incrementer
+who_likes_it
 
 ---------- set ----------
 sum_of_pairs
