@@ -44,6 +44,12 @@ two_to_one
 ---------- stack ----------
 valid_parentheses
 
+---------- list ----------
+circular
+
+---------- symbol ----------
+circular
+
 ---------- interesting ----------
 a_chain_adding_function
 directions_reduction
