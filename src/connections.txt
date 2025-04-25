@@ -50,6 +50,9 @@ circular
 ---------- symbol ----------
 circular
 
+---------- events ----------
+events
+
 ---------- interesting ----------
 a_chain_adding_function
 directions_reduction
