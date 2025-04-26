@@ -14,9 +14,9 @@
 // connect: interest
 
 
-// test('TreeNode is a constructor', () => {
-//   expect(typeof TreeNode.prototype.constructor).toEqual('function');
-// });
+test('TreeNode is a constructor', () => {
+  // expect(typeof TreeNode.prototype.constructor).toEqual('function');
+});
 
 // test('Node can insert correctly', () => {
 //   const node = new TreeNode(10);
