@@ -25,6 +25,7 @@ find_the_odd_int
 
 ---------- declare ----------
 jaden_casing_strings
+fromlast
 
 ---------- prototype ----------
 jaden_casing_strings
@@ -50,6 +51,7 @@ valid_parentheses
 
 ---------- list ----------
 circular
+fromlast
 
 ---------- symbol ----------
 circular
@@ -70,3 +72,4 @@ simple_pig_latin
 sum_of_pairs
 valid_parentheses
 bst
+fromlast

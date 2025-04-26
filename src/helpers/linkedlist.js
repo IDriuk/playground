@@ -1,17 +1,17 @@
-class Node {
+export class ListNode {
   constructor(data, next = null) {
     this.data = data;
     this.next = next;
   }
 }
 
-class LinkedList {
+export class LinkedList {
   constructor() {
     this.head = null;
   }
 
   insertFirst(data) {
-    this.head = new Node(data, this.head);
+    this.head = new ListNode(data, this.head);
   }
 
   size() {
@@ -80,10 +80,10 @@ class LinkedList {
 
     if (last) {
       // There are some existing nodes in our chain
-      last.next = new Node(data);
+      last.next = new ListNode(data);
     } else {
       // The chain is empty!
-      this.head = new Node(data);
+      this.head = new ListNode(data);
     }
   }
 
@@ -120,17 +120,17 @@ class LinkedList {
 
   insertAt(data, index) {
     if (!this.head) {
-      this.head = new Node(data);
+      this.head = new ListNode(data);
       return;
     }
 
     if (index === 0) {
-      this.head = new Node(data, this.head);
+      this.head = new ListNode(data, this.head);
       return;
     }
 
     const previous = this.getAt(index - 1) || this.getLast();
-    const node = new Node(data, previous.next);
+    const node = new ListNode(data, previous.next);
     previous.next = node;
   }
 
@@ -152,5 +152,3 @@ class LinkedList {
     }
   }
 }
-
-module.exports = { Node, LinkedList };
