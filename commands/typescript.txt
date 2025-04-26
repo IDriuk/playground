@@ -558,3 +558,38 @@ let s2 = new G.Square(10);
 
 It is legal in TypeScript for multiple interfaces with the same name to be created. 
 TypeScript will merge interfaces with the same name in a process called declaration merging.
+
+Add types:
+- linkedlist.js, linkedlist.d.ts (with export declare class ListNode<T = any> {}) in the same directory
+- tsconfig.json, typeRoots
+- /// <reference path="../path/to/your/declaration/file.d.ts" />
+
+global.d.ts (or any name you prefer) in your project root 
+declare module '../helpers/linkedlist' {
+  export class ListNode<T = any> {
+    data: T;
+    next: ListNode<T> | null;
+    constructor(data: T, next?: ListNode<T> | null);
+  }
+
+  export class LinkedList<T = any> {
+    head: ListNode<T> | null;
+    constructor();
+    insertFirst(data: T): void;
+    size(): number;
+    getFirst(): ListNode<T> | null;
+    getLast(): ListNode<T> | null;
+    clear(): void;
+    removeFirst(): void;
+    removeLast(): void;
+    insertLast(data: T): void;
+    getAt(index: number): ListNode<T> | null;
+    removeAt(index: number): void;
+    insertAt(data: T, index: number): void;
+    forEach(fn: (node: ListNode<T>, index: number) => void): void;
+    [Symbol.iterator](): IterableIterator<ListNode<T>>;
+  }
+}
+
+declare module '../helpers/linkedlist';
+import { LinkedList } from '../helpers/linkedlist';
