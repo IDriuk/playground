@@ -76,3 +76,4 @@ simple_string_reversal
 valid_parentheses
 bst
 fromlast
+matrix
