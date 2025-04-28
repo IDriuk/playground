@@ -77,3 +77,4 @@ sum_of_pairs
 bst
 fromlast
 matrix
+pyramid
