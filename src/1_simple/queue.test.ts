@@ -1,4 +1,28 @@
-const Queue = require('./index');
+// --- Description
+// Create a queue data structure.  The queue
+// should be a class with methods 'add' and 'remove'.
+// Adding to the queue should store an element until
+// it is removed
+// --- Examples
+//     const q = new Queue();
+//     q.add(1);
+//     q.remove(); // returns 1;
+
+// @ts-ignore
+class Queue<T> {
+  data: T[]
+  constructor() {
+    this.data = [];
+  }
+
+  add(record: T) {
+    this.data.unshift(record);
+  }
+
+  remove() {
+    return this.data.pop();
+  }
+}
 
 test('Queue is a class', () => {
   expect(typeof Queue.prototype.constructor).toEqual('function');
