@@ -1,4 +1,23 @@
-const reverseInt = require('./index');
+// --- Directions
+// Given an integer, return an integer that is the reverse
+// ordering of numbers.
+// --- Examples
+//   reverseInt(15) === 51
+//   reverseInt(981) === 189
+//   reverseInt(500) === 5
+//   reverseInt(-15) === -51
+//   reverseInt(-90) === -9
+// connect: undefined
+
+function reverseInt(n: number) {
+  const reversed = n
+    .toString()
+    .split('')
+    .reverse()
+    .join('');
+
+  return parseInt(reversed) * Math.sign(n);
+}
 
 test('ReverseInt function exists', () => {
   expect(reverseInt).toBeDefined();
@@ -21,3 +40,4 @@ test('ReverseInt flips a negative number', () => {
   expect(reverseInt(-90)).toEqual(-9);
   expect(reverseInt(-2359)).toEqual(-9532);
 });
+

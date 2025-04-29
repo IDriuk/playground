@@ -5,12 +5,7 @@
 //   reverse('apple') === 'leppa'
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
-
-function reverse(str) {
-  return str.split('').reduce((rev, char) => char + rev, '');
-}
-
-module.exports = reverse;
+// connect: undefined
 
 // function reverse(str) {
 //   return str
@@ -28,3 +23,21 @@ module.exports = reverse;
 //
 //   return reversed;
 // }
+
+
+function reverse(str: string) {
+  return str.split('').reduce((rev, char) => char + rev, '');
+}
+
+test('Reverse function exists', () => {
+  expect(reverse).toBeDefined();
+});
+
+test('Reverse reverses a string', () => {
+  expect(reverse('abcd')).toEqual('dcba');
+});
+
+test('Reverse reverses a string', () => {
+  expect(reverse('  abcd')).toEqual('dcba  ');
+});
+
