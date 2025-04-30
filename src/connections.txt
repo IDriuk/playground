@@ -55,6 +55,7 @@ fromlast
 
 ---------- tree ----------
 levelwidth
+tree
 
 ---------- symbol ----------
 circular
@@ -74,8 +75,9 @@ simple_pig_latin
 simple_string_reversal
 sum_of_pairs
 valid_parentheses
-> bst
-fromlast
+bst
+> fromlast
 matrix
 pyramid
 sorting
+tree
