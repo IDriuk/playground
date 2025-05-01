@@ -41,6 +41,7 @@ replace_with_alphabet_position
 simple_pig_latin
 string_incrementer
 who_likes_it
+regex
 
 ---------- set ----------
 sum_of_pairs
