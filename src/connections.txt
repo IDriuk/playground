@@ -50,6 +50,9 @@ two_to_one
 ---------- stack ----------
 valid_parentheses
 
+---------- queue ---------- 
+weave
+
 ---------- list ----------
 circular
 fromlast
