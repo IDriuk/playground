@@ -56,6 +56,7 @@ fromlast
 ---------- tree ----------
 levelwidth
 tree
+validate
 
 ---------- symbol ----------
 circular
@@ -81,3 +82,4 @@ fromlast
 pyramid
 sorting
 tree
+validate
