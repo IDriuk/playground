@@ -76,8 +76,8 @@ simple_string_reversal
 sum_of_pairs
 valid_parentheses
 bst
-> fromlast
-matrix
+fromlast
+> matrix
 pyramid
 sorting
 tree
