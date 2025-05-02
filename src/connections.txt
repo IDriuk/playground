@@ -82,8 +82,8 @@ sum_of_pairs
 valid_parentheses
 bst
 fromlast
-> matrix
-pyramid
+matrix
+> pyramid
 sorting
 tree
 validate
