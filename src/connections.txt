@@ -86,8 +86,8 @@ bst
 fromlast
 matrix
 pyramid
-> sorting
-tree
+sorting
+> tree
 validate
 3sum
 add_two_numbers
