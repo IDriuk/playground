@@ -54,6 +54,7 @@ two_to_one
 
 ---------- stack ----------
 valid_parentheses
+binary_tree_inorder_traversal
 
 ---------- queue ---------- 
 weave
@@ -67,6 +68,7 @@ add_two_numbers
 levelwidth
 tree
 validate
+binary_tree_inorder_traversal
 
 ---------- symbol ----------
 circular
@@ -91,8 +93,9 @@ fromlast
 matrix
 pyramid
 sorting
-> tree
-validate
+tree
+> validate
 3sum
 add_two_numbers
 best_time_to_buy_and_sell_stock
+binary_tree_inorder_traversal
