@@ -69,6 +69,8 @@ levelwidth
 tree
 validate
 binary_tree_inorder_traversal
+binary_tree_level_order_traversal
+binary_tree_maximum_path_sum
 
 ---------- symbol ----------
 circular
@@ -94,8 +96,9 @@ matrix
 pyramid
 sorting
 tree
-> validate
 3sum
+> validate
 add_two_numbers
 best_time_to_buy_and_sell_stock
 binary_tree_inorder_traversal
+binary_tree_maximum_path_sum
