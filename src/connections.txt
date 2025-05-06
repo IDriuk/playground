@@ -19,6 +19,10 @@ persistent_bugger
 ---------- combinations ----------
 best_travel
 3sum
+climbing_stairs.test
+
+---------- dp ----------
+climbing_stairs.test
 
 ---------- bits ----------
 bit_counting
