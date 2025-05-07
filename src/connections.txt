@@ -23,6 +23,7 @@ climbing_stairs.test
 
 ---------- dp ----------
 climbing_stairs.test
+coin_change
 
 ---------- bits ----------
 bit_counting
@@ -101,8 +102,9 @@ pyramid
 sorting
 tree
 3sum
-> validate
-add_two_numbers
+validate
+> add_two_numbers
 best_time_to_buy_and_sell_stock
 binary_tree_inorder_traversal
 binary_tree_maximum_path_sum
+coin_change
