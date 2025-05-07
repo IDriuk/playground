@@ -19,10 +19,11 @@ persistent_bugger
 ---------- combinations ----------
 best_travel
 3sum
-climbing_stairs.test
+climbing_stairs
+combination_sum
 
 ---------- dp ----------
-climbing_stairs.test
+climbing_stairs
 coin_change
 
 ---------- bits ----------
