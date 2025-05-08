@@ -9,6 +9,7 @@ fib
 ---------- recursion ----------
 best_travel
 sum_of_digits_digital_root
+count_and_say
 
 ---------- reduce ----------
 array_dif
@@ -52,7 +53,8 @@ replace_with_alphabet_position
 simple_pig_latin
 string_incrementer
 who_likes_it
-regex
+vowel_count
+count_and_say
 
 ---------- set ----------
 sum_of_pairs
