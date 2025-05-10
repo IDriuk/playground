@@ -57,6 +57,7 @@ string_incrementer
 who_likes_it
 vowel_count
 count_and_say
+decode_string
 
 ---------- set ----------
 sum_of_pairs
@@ -115,8 +116,9 @@ tree
 validate
 add_two_numbers
 best_time_to_buy_and_sell_stock
->  binary_tree_inorder_traversal
-binary_tree_maximum_path_sum
+binary_tree_inorder_traversal
+>  binary_tree_maximum_path_sum
 coin_change
 container_with_most_water
 count_primes
+decode_string
