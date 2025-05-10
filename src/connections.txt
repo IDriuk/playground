@@ -10,6 +10,7 @@ fib
 best_travel
 sum_of_digits_digital_root
 count_and_say
+edit_distance
 
 ---------- reduce ----------
 array_dif
@@ -27,6 +28,7 @@ combination_sum
 climbing_stairs
 coin_change
 count_primes
+edit_distance
 
 ---------- bits ----------
 bit_counting
