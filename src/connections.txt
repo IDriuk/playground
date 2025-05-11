@@ -96,6 +96,9 @@ circular
 ---------- events ----------
 events
 
+---------- slide ----------
+find_all_anagrams_in_a_string
+
 ---------- interesting ----------
 a_chain_adding_function
 directions_reduction
