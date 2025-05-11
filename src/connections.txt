@@ -119,8 +119,9 @@ validate
 add_two_numbers
 best_time_to_buy_and_sell_stock
 binary_tree_inorder_traversal
->  binary_tree_maximum_path_sum
-coin_change
+binary_tree_maximum_path_sum
+>  coin_change
 container_with_most_water
 count_primes
 decode_string
+excel_sheet_column_number

@@ -1,12 +1,11 @@
 // Excel Sheet Column Number
+// Given a string columnTitle that represents the column title as appears in an Excel sheet, 
+// return its corresponding column number.
 // https://leetcode.com/problems/excel-sheet-column-number/submissions/
+// connect: interesting
 
-/**
- * @param {string} s
- * @return {number}
- */
-var titleToNumber = function(s) {
-  const map = {
+var titleToNumber = function(s:string) {
+  const map: Record<string, number> = {
       A: 1, 
       B: 2, 
       C: 3, 
@@ -37,3 +36,9 @@ var titleToNumber = function(s) {
   
   return s.split('').reverse().reduce( (ac, val, i) => ac + map[val] * Math.pow(26, i), 0 )
 };
+
+test("it should convert excel title to number", () => {
+  expect(titleToNumber("A")).toBe(1)
+  expect(titleToNumber("AB")).toBe(28)
+  expect(titleToNumber("ZY")).toBe(701)
+})
