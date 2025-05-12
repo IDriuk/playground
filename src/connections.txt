@@ -64,6 +64,7 @@ decode_string
 ---------- set ----------
 sum_of_pairs
 two_to_one
+first_missing_positive
 
 ---------- stack ----------
 valid_parentheses

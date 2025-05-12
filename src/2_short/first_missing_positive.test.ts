@@ -1,17 +1,6 @@
 // First Missing Positive
 // https://leetcode.com/problems/first-missing-positive/submissions/
-
-/**
- * @param {number[]} nums
- * @return {number}
- */
-var firstMissingPositive = function(nums) {
-  let ar = nums.filter( v => v > 0 )
-  let set = new Set(ar)
-  let i = 1
-  while (set.has(i)) { i++ }
-  return i
-};
+// connect: set
 
 /* 
 public int firstMissingPositive(int[] nums) {
@@ -35,3 +24,17 @@ public int firstMissingPositive(int[] nums) {
   return length + 1; // Nothing in middle missing, return largest
 } 
 */
+
+var firstMissingPositive = function(nums: number[]) {
+  let ar = nums.filter( v => v > 0 )
+  let set = new Set(ar)
+  let i = 1
+  while (set.has(i)) { i++ }
+  return i
+};
+
+test("first missing positive", () => {
+  expect(firstMissingPositive([1,2,0])).toBe(3)
+  expect(firstMissingPositive([3,4,-1,1])).toBe(2)
+  expect(firstMissingPositive([7,8,9,11,12])).toBe(1)
+})
