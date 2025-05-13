@@ -11,6 +11,7 @@ best_travel
 sum_of_digits_digital_root
 count_and_say
 edit_distance
+generate_parentheses
 
 ---------- reduce ----------
 array_dif
@@ -133,3 +134,4 @@ container_with_most_water
 decode_string
 excel_sheet_column_number
 find_the_duplicate_number
+generate_parentheses
