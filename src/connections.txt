@@ -5,6 +5,7 @@ fib
 
 ---------- memoize ----------
 fib
+house_robber_iii
 
 ---------- recursion ----------
 best_travel
@@ -13,6 +14,7 @@ count_and_say
 edit_distance
 generate_parentheses
 happy_number
+house_robber_iii
 
 ---------- reduce ----------
 array_dif
@@ -89,6 +91,7 @@ binary_tree_level_order_traversal
 binary_tree_maximum_path_sum
 construct_binary_tree_from_preorder_and_inorder_traversal
 convert_sorted_array_to_binary_search_tree
+house_robber_iii
 
 ---------- graph ----------
 course_schedule
