@@ -12,6 +12,7 @@ sum_of_digits_digital_root
 count_and_say
 edit_distance
 generate_parentheses
+happy_number
 
 ---------- reduce ----------
 array_dif
@@ -130,8 +131,9 @@ binary_tree_inorder_traversal
 binary_tree_maximum_path_sum
 coin_change
 container_with_most_water
->  count_primes
-decode_string
+count_primes
+>  decode_string
 excel_sheet_column_number
 find_the_duplicate_number
 generate_parentheses
+happy_number
