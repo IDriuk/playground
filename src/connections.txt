@@ -33,6 +33,7 @@ climbing_stairs
 coin_change
 count_primes
 edit_distance
+house_robber
 
 ---------- bits ----------
 bit_counting
