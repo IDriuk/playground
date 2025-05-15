@@ -83,6 +83,7 @@ weave
 circular
 fromlast
 add_two_numbers
+intersection_of_two_linked_lists
 
 ---------- tree ----------
 levelwidth
@@ -142,4 +143,4 @@ decode_string
 find_the_duplicate_number
 generate_parentheses
 happy_number
-intersection_of_two_arrays_ii
+intersection_of_two_linked_lists
