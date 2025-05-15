@@ -95,6 +95,7 @@ binary_tree_maximum_path_sum
 construct_binary_tree_from_preorder_and_inorder_traversal
 convert_sorted_array_to_binary_search_tree
 house_robber_iii
+invert_binary_tree
 
 ---------- graph ----------
 course_schedule
