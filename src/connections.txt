@@ -70,6 +70,7 @@ decode_string
 sum_of_pairs
 two_to_one
 first_missing_positive
+intersection_of_two_arrays_ii
 
 ---------- stack ----------
 valid_parentheses
@@ -141,3 +142,4 @@ decode_string
 find_the_duplicate_number
 generate_parentheses
 happy_number
+intersection_of_two_arrays_ii
