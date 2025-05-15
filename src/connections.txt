@@ -34,6 +34,7 @@ coin_change
 count_primes
 edit_distance
 house_robber
+jump_game_ii
 
 ---------- bits ----------
 bit_counting
