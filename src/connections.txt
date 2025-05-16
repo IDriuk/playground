@@ -16,6 +16,9 @@ generate_parentheses
 happy_number
 house_robber_iii
 
+---------- heap ----------
+kth_largest_element_in_an_array
+
 ---------- reduce ----------
 array_dif
 best_travel
