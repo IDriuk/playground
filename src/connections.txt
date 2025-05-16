@@ -142,8 +142,8 @@ coin_change
 container_with_most_water
 count_primes
 decode_string
->  excel_sheet_column_number
-find_the_duplicate_number
+excel_sheet_column_number
+>  find_the_duplicate_number
 generate_parentheses
 happy_number
 intersection_of_two_linked_lists
