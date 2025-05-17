@@ -15,6 +15,7 @@ edit_distance
 generate_parentheses
 happy_number
 house_robber_iii
+letter_combinations_of_a_phone_number
 
 ---------- heap ----------
 kth_largest_element_in_an_array
@@ -30,6 +31,7 @@ best_travel
 3sum
 climbing_stairs
 combination_sum
+letter_combinations_of_a_phone_number
 
 ---------- dp ----------
 climbing_stairs
@@ -152,3 +154,4 @@ find_the_duplicate_number
 happy_number
 intersection_of_two_linked_lists
 kth_largest_element_in_an_array.test
+letter_combinations_of_a_phone_number
