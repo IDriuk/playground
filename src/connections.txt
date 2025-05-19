@@ -157,3 +157,4 @@ happy_number
 kth_largest_element_in_an_array
 letter_combinations_of_a_phone_number
 leetcode/linked_list_cycle_ii
+longest_increasing_subsequence
