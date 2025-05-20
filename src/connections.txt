@@ -86,6 +86,7 @@ binary_tree_inorder_traversal
 
 ---------- queue ---------- 
 weave
+lengthOfLongestSubstring
 
 ---------- list ----------
 circular
