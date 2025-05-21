@@ -162,3 +162,4 @@ kth_largest_element_in_an_array
 leetcode/linked_list_cycle_ii
 longest_increasing_subsequence
 longest_valid_parentheses
+majority_element.test
