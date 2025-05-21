@@ -1,7 +1,7 @@
 // Longest Palindromic Substring
 // https://leetcode.com/problems/longest-palindromic-substring/
 // Given a string s, return the longest palindromic substring in s.
-// connect: interesting, recursion
+// connect: recursion
 
 var longestPalindrome = function(s: string) {
   if ( s.length <= 1 ) { return s }

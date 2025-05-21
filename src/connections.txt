@@ -157,8 +157,8 @@ find_the_duplicate_number
 generate_parentheses
 happy_number
 intersection_of_two_linked_lists
->  kth_largest_element_in_an_array
-letter_combinations_of_a_phone_number
+kth_largest_element_in_an_array
+>  letter_combinations_of_a_phone_number
 leetcode/linked_list_cycle_ii
 longest_increasing_subsequence
 longest_valid_parentheses
