@@ -41,6 +41,7 @@ edit_distance
 house_robber
 jump_game_ii
 jump_game
+maximal_rectangle
 
 ---------- bits ----------
 bit_counting
@@ -63,6 +64,7 @@ number_of_trailing_zeros_of_n!
 ---------- minmax ----------
 best_time_to_buy_and_sell_stock
 best_time_to_buy_and_sell_stock_ii
+maximal_rectangle
 
 
 ---------- regex ----------
@@ -158,8 +160,9 @@ generate_parentheses
 happy_number
 intersection_of_two_linked_lists
 kth_largest_element_in_an_array
->  letter_combinations_of_a_phone_number
-leetcode/linked_list_cycle_ii
+letter_combinations_of_a_phone_number
+>  leetcode/linked_list_cycle_ii
 longest_increasing_subsequence
 longest_valid_parentheses
-majority_element.test
+majority_element
+maximal_rectangle
