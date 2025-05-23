@@ -16,6 +16,7 @@ generate_parentheses
 happy_number
 house_robber_iii
 letter_combinations_of_a_phone_number
+maximum_depth_of_binary_tree
 
 ---------- heap ----------
 kth_largest_element_in_an_array
@@ -168,3 +169,4 @@ linked_list_cycle_ii
 longest_valid_parentheses
 majority_element
 maximal_rectangle
+maximum_depth_of_binary_tree
