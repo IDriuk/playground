@@ -68,6 +68,7 @@ best_time_to_buy_and_sell_stock
 best_time_to_buy_and_sell_stock_ii
 maximal_rectangle
 maximal_square
+maximum_product_subarray
 
 
 ---------- regex ----------
@@ -170,3 +171,4 @@ longest_increasing_subsequence
 majority_element
 maximal_rectangle
 maximum_depth_of_binary_tree
+maximum_product_subarray
