@@ -130,6 +130,9 @@ find_all_anagrams_in_a_string
 ---------- cycle ----------
 find_the_duplicate_number
 
+---------- intervals ----------
+merge_intervals
+
 ---------- interesting ----------
 a_chain_adding_function
 directions_reduction
@@ -168,8 +171,9 @@ letter_combinations_of_a_phone_number
 linked_list_cycle_ii
 longest_increasing_subsequence
 longest_valid_parentheses
->  majority_element
-maximal_rectangle
+majority_element
+>  maximal_rectangle
 maximum_depth_of_binary_tree
 maximum_product_subarray
 median_of_two_sorted_arrays
+merge_intervals
