@@ -101,6 +101,7 @@ fromlast
 add_two_numbers
 intersection_of_two_linked_lists
 linked_list_cycle_ii
+merge_two_sorted_lists
 
 ---------- tree ----------
 levelwidth
@@ -177,3 +178,4 @@ maximal_rectangle
 maximum_product_subarray
 median_of_two_sorted_arrays
 merge_intervals
+merge_two_sorted_lists
