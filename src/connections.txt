@@ -172,8 +172,8 @@ linked_list_cycle_ii
 longest_increasing_subsequence
 longest_valid_parentheses
 majority_element
->  maximal_rectangle
-maximum_depth_of_binary_tree
+maximal_rectangle
+>  maximum_depth_of_binary_tree
 maximum_product_subarray
 median_of_two_sorted_arrays
 merge_intervals
