@@ -90,6 +90,7 @@ intersection_of_two_arrays_ii
 valid_parentheses
 binary_tree_inorder_traversal
 longest_valid_parentheses
+min_stack
 
 ---------- queue ---------- 
 weave
@@ -174,8 +175,9 @@ longest_increasing_subsequence
 longest_valid_parentheses
 majority_element
 maximal_rectangle
->  maximum_depth_of_binary_tree
-maximum_product_subarray
+maximum_depth_of_binary_tree
+>  maximum_product_subarray
 median_of_two_sorted_arrays
 merge_intervals
 merge_two_sorted_lists
+min_stack
