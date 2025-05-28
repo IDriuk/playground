@@ -1,11 +1,10 @@
 // Minimum Path Sum
+// Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right, 
+// which minimizes the sum of all numbers along its path.
+// Note: You can only move either down or right at any point in time.
 // https://leetcode.com/problems/minimum-path-sum/
 
-/**
- * @param {number[][]} grid
- * @return {number}
- */
-var minPathSum = function(grid) {
+var minPathSum = function(grid: number[][]) {
     
   let n = grid.length
   let m = grid[0].length
@@ -26,3 +25,8 @@ var minPathSum = function(grid) {
   
   return grid[n - 1][m - 1]
 };
+
+test("minimum path sum", () => {
+  expect(minPathSum([[1,3,1],[1,5,1],[4,2,1]])).toBe(7)
+  expect(minPathSum([[1,2,3],[4,5,6]])).toBe(12)
+})
