@@ -49,6 +49,7 @@ maximal_square
 bit_counting
 find_the_odd_int
 counting_bits
+missing_number
 
 ---------- declare ----------
 jaden_casing_strings
@@ -182,3 +183,4 @@ maximum_product_subarray
 merge_intervals
 merge_two_sorted_lists
 min_stack
+missing_number
