@@ -59,6 +59,7 @@ jaden_casing_strings
 
 ---------- subarray ----------
 maximum_subarray_sum
+minimum_window_substring
 
 ---------- factorial ----------
 number_of_trailing_zeros_of_n!
@@ -176,8 +177,8 @@ longest_valid_parentheses
 majority_element
 maximal_rectangle
 maximum_depth_of_binary_tree
->  maximum_product_subarray
-median_of_two_sorted_arrays
+maximum_product_subarray
+>  median_of_two_sorted_arrays
 merge_intervals
 merge_two_sorted_lists
 min_stack
