@@ -17,6 +17,7 @@ happy_number
 house_robber_iii
 letter_combinations_of_a_phone_number
 maximum_depth_of_binary_tree
+number_of_islands
 
 ---------- heap ----------
 kth_largest_element_in_an_array
