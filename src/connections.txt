@@ -50,6 +50,7 @@ bit_counting
 find_the_odd_int
 counting_bits
 missing_number
+number_of_1_bits
 
 ---------- declare ----------
 jaden_casing_strings
@@ -179,8 +180,9 @@ majority_element
 maximal_rectangle
 maximum_depth_of_binary_tree
 maximum_product_subarray
->  median_of_two_sorted_arrays
-merge_intervals
+median_of_two_sorted_arrays
+>  merge_intervals
 merge_two_sorted_lists
 min_stack
 missing_number
+number_of_1_bits
