@@ -182,8 +182,8 @@ maximal_rectangle
 maximum_depth_of_binary_tree
 maximum_product_subarray
 median_of_two_sorted_arrays
->  merge_intervals
-merge_two_sorted_lists
+merge_intervals
+>  merge_two_sorted_lists
 min_stack
 missing_number
 number_of_1_bits
