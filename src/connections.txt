@@ -187,3 +187,4 @@ merge_intervals
 min_stack
 missing_number
 number_of_1_bits
+palindrome_linked_list
