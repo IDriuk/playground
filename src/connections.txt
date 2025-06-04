@@ -188,8 +188,9 @@ merge_intervals
 merge_two_sorted_lists
 min_stack
 missing_number
->  number_of_1_bits
-partition_labels
+number_of_1_bits
+>  partition_labels
 pascals_triangle.test
 perfect_squares
 plus_one
+product_of_array_except_self
