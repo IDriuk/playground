@@ -110,6 +110,7 @@ add_two_numbers
 intersection_of_two_linked_lists
 linked_list_cycle_ii
 merge_two_sorted_lists
+remove_nth_node_from_end_of_list
 
 ---------- tree ----------
 levelwidth
