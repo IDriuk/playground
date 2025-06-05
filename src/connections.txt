@@ -85,6 +85,7 @@ who_likes_it
 vowel_count
 count_and_say
 decode_string
+regular_expression_matching
 
 ---------- set ----------
 sum_of_pairs

@@ -1,15 +1,13 @@
 // Regular Expression Matching
+// Given an input string s and a pattern p, implement regular expression matching with support for '.' and '*' where:
+// '.' Matches any single character.​​​​
+// '*' Matches zero or more of the preceding element.
+// The matching should cover the entire input string (not partial).
 // https://leetcode.com/problems/regular-expression-matching/
 
-/**
- * @param {string} s
- * @param {string} p
- * @return {boolean}
- */
-
-var isMatch = function(s, p) {
-  s = s.split('')
-  p = p.split('')
+var isMatch = function(str: string, patr: string) {
+  let s = str.split('')
+  let p = patr.split('')
   let sl = s.length
   let pl = p.length
   
@@ -29,3 +27,9 @@ var isMatch = function(s, p) {
   
   return dp[0][0]
 };
+
+test (" regular expression matching", () => {
+  expect(isMatch('aa','a')).toBe(false)
+  expect(isMatch('aa','a*')).toBe(true)
+  expect(isMatch('ab','.*')).toBe(true)
+})
