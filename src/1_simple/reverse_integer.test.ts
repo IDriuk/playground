@@ -5,11 +5,11 @@
 // https://leetcode.com/problems/reverse-integer/
 // connect: undefined
 
-var reverse = function(x) {
+export const reverse = function(x: number) {
   let sign = x < 0 ? '-' : ''
   x = sign == '-' ? x : -x
-  x = x.toString().split('').reverse().join('')
-  x = +(sign + parseInt(x))
+  let y = x.toString().split('').reverse().join('')
+  x = +(sign + parseInt(y))
   if ( x > 2147483647 || x <  -2147483648) return 0
   return x
 };
