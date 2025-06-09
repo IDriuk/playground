@@ -197,8 +197,9 @@ partition_labels
 pascals_triangle.test
 perfect_squares
 plus_one
->  product_of_array_except_self
-remove_duplicates_from_sorted_array
+product_of_array_except_self
+>  remove_duplicates_from_sorted_array
 reverse_bits
 reverse_linked_list
 roman_to_integer
+rotate_image
