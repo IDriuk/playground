@@ -28,6 +28,7 @@ best_travel
 checkExam
 persistent_bugger
 queue_reconstruction_by_height
+running_sum_of_1d_array
 
 ---------- combinations ----------
 best_travel
@@ -198,8 +199,9 @@ pascals_triangle.test
 perfect_squares
 plus_one
 product_of_array_except_self
->  remove_duplicates_from_sorted_array
-reverse_bits
+remove_duplicates_from_sorted_array
+>  reverse_bits
 reverse_linked_list
 roman_to_integer
 rotate_image
+running_sum_of_1d_array
