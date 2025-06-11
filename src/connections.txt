@@ -18,6 +18,7 @@ house_robber_iii
 letter_combinations_of_a_phone_number
 maximum_depth_of_binary_tree
 number_of_islands
+search_in_rotated_sorted_array
 
 ---------- heap ----------
 kth_largest_element_in_an_array
@@ -200,8 +201,9 @@ perfect_squares
 plus_one
 product_of_array_except_self
 remove_duplicates_from_sorted_array
->  reverse_bits
-reverse_linked_list
+reverse_bits
+>  reverse_linked_list
 roman_to_integer
 rotate_image
 running_sum_of_1d_array
+search_in_rotated_sorted_array
