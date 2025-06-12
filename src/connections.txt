@@ -127,6 +127,7 @@ convert_sorted_array_to_binary_search_tree
 house_robber_iii
 invert_binary_tree
 lowest_common_ancestor_of_a_binary_tree
+serialize_and_deserialize_binary_tree
 
 ---------- graph ----------
 course_schedule
@@ -202,8 +203,8 @@ plus_one
 product_of_array_except_self
 remove_duplicates_from_sorted_array
 reverse_bits
->  reverse_linked_list
-roman_to_integer
+reverse_linked_list
+>  roman_to_integer
 rotate_image
 running_sum_of_1d_array
 search_in_rotated_sorted_array
