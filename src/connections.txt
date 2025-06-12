@@ -66,6 +66,7 @@ jaden_casing_strings
 ---------- subarray ----------
 maximum_subarray_sum
 minimum_window_substring
+shortest_unsorted_continuous_subarray
 
 ---------- factorial ----------
 number_of_trailing_zeros_of_n!
@@ -208,3 +209,4 @@ reverse_linked_list
 rotate_image
 running_sum_of_1d_array
 search_in_rotated_sorted_array
+shortest_unsorted_continuous_subarray
