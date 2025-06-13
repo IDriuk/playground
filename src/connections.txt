@@ -95,6 +95,7 @@ sum_of_pairs
 two_to_one
 first_missing_positive
 intersection_of_two_arrays_ii
+single_number
 
 ---------- stack ----------
 valid_parentheses
@@ -205,8 +206,8 @@ product_of_array_except_self
 remove_duplicates_from_sorted_array
 reverse_bits
 reverse_linked_list
->  roman_to_integer
-rotate_image
+roman_to_integer
+>  rotate_image
 running_sum_of_1d_array
 search_in_rotated_sorted_array
 shortest_unsorted_continuous_subarray
