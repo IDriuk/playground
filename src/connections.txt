@@ -142,6 +142,7 @@ events
 
 ---------- slide ----------
 find_all_anagrams_in_a_string
+sliding_window_maximum
 
 ---------- cycle ----------
 find_the_duplicate_number
@@ -211,3 +212,4 @@ roman_to_integer
 running_sum_of_1d_array
 search_in_rotated_sorted_array
 shortest_unsorted_continuous_subarray
+sliding_window_maximum
