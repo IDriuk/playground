@@ -210,8 +210,8 @@ reverse_linked_list
 roman_to_integer
 rotate_image
 running_sum_of_1d_array
->  search_in_rotated_sorted_array
-shortest_unsorted_continuous_subarray
+search_in_rotated_sorted_array
+>  shortest_unsorted_continuous_subarray
 sliding_window_maximum
 sort_colors
 sqrtx
