@@ -37,6 +37,7 @@ best_travel
 climbing_stairs
 combination_sum
 letter_combinations_of_a_phone_number
+subsets
 
 ---------- dp ----------
 climbing_stairs
@@ -212,8 +213,9 @@ roman_to_integer
 rotate_image
 running_sum_of_1d_array
 search_in_rotated_sorted_array
->  shortest_unsorted_continuous_subarray
-sliding_window_maximum
+shortest_unsorted_continuous_subarray
+>  sliding_window_maximum
 sort_colors
 sqrtx
 subarray_sum_equals_k
+subsets
