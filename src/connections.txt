@@ -131,6 +131,7 @@ house_robber_iii
 invert_binary_tree
 lowest_common_ancestor_of_a_binary_tree
 serialize_and_deserialize_binary_tree
+symmetric_tree
 
 ---------- graph ----------
 course_schedule
@@ -214,8 +215,9 @@ rotate_image
 running_sum_of_1d_array
 search_in_rotated_sorted_array
 shortest_unsorted_continuous_subarray
->  sliding_window_maximum
-sort_colors
+sliding_window_maximum
+>  sort_colors
 sqrtx
 subarray_sum_equals_k
 subsets
+target_sum
