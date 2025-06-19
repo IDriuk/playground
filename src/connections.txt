@@ -216,8 +216,8 @@ running_sum_of_1d_array
 search_in_rotated_sorted_array
 shortest_unsorted_continuous_subarray
 sliding_window_maximum
->  sort_colors
-sqrtx
+sort_colors
+>  sqrtx
 subarray_sum_equals_k
 subsets
 target_sum

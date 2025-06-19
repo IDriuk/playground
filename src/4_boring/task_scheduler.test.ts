@@ -1,13 +1,13 @@
 // Task Scheduler
+// You are given an array of CPU tasks, each labeled with a letter from A to Z, and a number n. 
+// Each CPU interval can be idle or allow the completion of one task. Tasks can be completed in any order, 
+// but there's a constraint: there has to be a gap of at least n intervals between two tasks with the same label.
+// Return the minimum number of CPU intervals required to complete all tasks.
 // https://leetcode.com/problems/task-scheduler/
+// connect: undefined
 
-/**
- * @param {character[]} tasks
- * @param {number} n
- * @return {number}
- */
-var leastInterval = function(tasks, n) {
-  let taskMap = {}
+var leastInterval = function(tasks: string[], n: number) {
+  let taskMap: Record<string,Record<string, number>> = {}
   
   for (let task of tasks) {
       if (taskMap[task]) {
@@ -29,7 +29,7 @@ var leastInterval = function(tasks, n) {
       let [char, { count, position }] = entries[i]
       let cur = schedule.length - 1
       if ((position < 0 || cur - position >= n) && count > maxCount) {
-        maxIndex = i
+        maxIndex = +i
         maxCount = count
       } 
     }
@@ -57,3 +57,9 @@ var leastInterval = function(tasks, n) {
     
   }
 };
+
+test("task scheduler", () => {
+  expect(leastInterval(["A","A","A","B","B","B"], 2)).toBe(8)
+  expect(leastInterval(["A","C","A","B","D","B"], 1)).toBe(6)
+  expect(leastInterval(["A","A","A", "B","B","B"], 3)).toBe(10)
+})
