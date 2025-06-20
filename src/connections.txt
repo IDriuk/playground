@@ -49,6 +49,7 @@ jump_game_ii
 jump_game
 maximal_rectangle
 maximal_square
+trapping_rain_water
 
 ---------- bits ----------
 bit_counting
@@ -217,8 +218,9 @@ search_in_rotated_sorted_array
 shortest_unsorted_continuous_subarray
 sliding_window_maximum
 sort_colors
->  sqrtx
-subarray_sum_equals_k
+sqrtx
+>  subarray_sum_equals_k
 subsets
 target_sum
 top_k_frequent_elements
+trapping_rain_water
