@@ -51,6 +51,7 @@ jump_game
 maximal_rectangle
 maximal_square
 trapping_rain_water
+unique_paths
 
 ---------- bits ----------
 bit_counting
@@ -221,8 +222,9 @@ sliding_window_maximum
 sort_colors
 sqrtx
 subarray_sum_equals_k
->  subsets
-target_sum
+subsets
+>  target_sum
 top_k_frequent_elements
 trapping_rain_water
 unique_binary_search_trees
+unique_paths
