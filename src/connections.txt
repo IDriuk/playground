@@ -19,6 +19,7 @@ letter_combinations_of_a_phone_number
 maximum_depth_of_binary_tree
 number_of_islands
 search_in_rotated_sorted_array
+word_search
 
 ---------- heap ----------
 kth_largest_element_in_an_array
