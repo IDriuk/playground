@@ -137,6 +137,9 @@ lowest_common_ancestor_of_a_binary_tree
 serialize_and_deserialize_binary_tree
 symmetric_tree
 
+---------- trie ----------
+word_search_ii
+
 ---------- graph ----------
 course_schedule
 
