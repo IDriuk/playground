@@ -1,12 +1,11 @@
 // Word Break
+// Given a string s and a dictionary of strings wordDict, 
+// return true if s can be segmented into a space-separated sequence of one or more dictionary words.
+// Note that the same word in the dictionary may be reused multiple times in the segmentation.
 // https://leetcode.com/problems/word-break/
+// connect: dp, interesting
 
-/**
- * @param {string} s
- * @param {string[]} wordDict
- * @return {boolean}
- */
-var wordBreak = function(s, wordDict) {
+var wordBreak = function(s: string, wordDict: string[]) {
   let len = s.length
   let table = Array(s.length + 1).fill(null).map( el => Array(s.length + 1).fill(false))
   
@@ -34,21 +33,8 @@ var wordBreak = function(s, wordDict) {
   return false
 };
 
-/*
-public class Solution {
-    public boolean wordBreak(String s, List<String> wordDict) {
-        Set<String> wordDictSet=new HashSet(wordDict);
-        boolean[] dp = new boolean[s.length() + 1];
-        dp[0] = true;
-        for (int i = 1; i <= s.length(); i++) {
-            for (int j = 0; j < i; j++) {
-                if (dp[j] && wordDictSet.contains(s.substring(j, i))) {
-                    dp[i] = true;
-                    break;
-                }
-            }
-        }
-        return dp[s.length()];
-    }
-}
-*/
+test("word break", () => {
+  expect(wordBreak("leetcode", ["leet","code"])).toBe(true)
+  expect(wordBreak("applepenapple", ["apple","pen"])).toBe(true)
+  expect(wordBreak("catsandog", ["cats","dog","sand","and","cat"])).toBe(false)
+})

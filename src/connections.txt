@@ -52,6 +52,7 @@ maximal_rectangle
 maximal_square
 trapping_rain_water
 unique_paths
+word_break
 
 ---------- bits ----------
 bit_counting
@@ -226,8 +227,9 @@ subsets
 target_sum
 top_k_frequent_elements
 trapping_rain_water
->  unique_binary_search_trees
-unique_paths
+unique_binary_search_trees
+>  unique_paths
 valid_anagram
 valid_palindrome
 valid_parentheses
+word_break
