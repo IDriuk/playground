@@ -234,6 +234,6 @@ trapping_rain_water
 unique_binary_search_trees
 unique_paths
 valid_anagram
->  valid_palindrome
+valid_palindrome
 valid_parentheses
 word_break
